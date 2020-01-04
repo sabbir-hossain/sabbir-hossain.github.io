@@ -36,11 +36,12 @@
 }
 
 #myCanvas {
-  background-color: #fff;
+  background-color: #C5DDEB;
 }
 
 canvas {
   padding: 0;
   margin: auto;
   display: block;
+  border: 1px solid #333;
 }
