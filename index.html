@@ -6,47 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sabbir</title>
 
+  <link href="css/header.css" rel="stylesheet" type="text/css">
   <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-    <div class="wrapper">
-
-      <header class="header-contents">
-        <ul class="header-value">
-          <li class="title">
-            <a href="./index.html" class="header-name"> 
-              <span class="name">Sabbir Hossain</span>
-            </a>   
-          </li>
-     
-          <li> <span class="menu menu-hidden">Tic Tac game</span> </li>
+  <header class="header-contents">
+    <ul class="header-value">
+      <li class="title">
+        <a href="./index.html" class="header-name"> 
+          <span class="name">Sabbir Hossain</span>
+        </a>   
+      </li>
   
-          <li class="border-right"> 
-            <img src="image/email.jpg" class="icon" />
-            <a class="pm-link" href="mailto:webmaster@example.com">sabbir.hossain.dev@gmail.com</a>
-          </li> 
+      <li> <span class="menu menu-hidden">Tic Tac game</span> </li>
 
-          <li class="border-right"> 
-            <a class="pm-link" target="_blank" href="https://www.linkedin.com/in/sabbir-hossain-7a80b961/"><img src="image/linkedin.png" class="icon" /></a>
-          </li>
+      <li class="border-right"> 
+        <img src="image/email.jpg" class="icon" />
+        <a class="pm-link" href="mailto:webmaster@example.com">sabbir.hossain.dev@gmail.com</a>
+      </li> 
 
-          <li class="border-right"> 
-            <a class="pm-link" target="_blank" href="https://github.com/sabbir-hossain"><img src="image/github.jpg" class="icon" /></a>
-          </li>
+      <li class="border-right"> 
+        <a class="pm-link" target="_blank" href="https://www.linkedin.com/in/sabbir-hossain-7a80b961/"><img src="image/linkedin.png" class="icon" /></a>
+      </li>
 
-          <li class="border"> 
-            <a class="pm-link" target="_blank" href="https://stackoverflow.com/users/1813546/sabbir"><img src="image/stackoverflow.png" class="icon" /></a>
-          </li>
-        </ul>
-      </header>
+      <li class="border-right"> 
+        <a class="pm-link" target="_blank" href="https://github.com/sabbir-hossain"><img src="image/github.jpg" class="icon" /></a>
+      </li>
 
-  
-      <main>
-          <p>I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and their ears are so, so snuggly soft!</p>
-      </main>    
+      <li class="border"> 
+        <a class="pm-link" target="_blank" href="https://stackoverflow.com/users/1813546/sabbir"><img src="image/stackoverflow.png" class="icon" /></a>
+      </li>
+    </ul>
+  </header>
 
+  <!-- <div class="row">
+    <div class="column">
+      <img src="image/left.png" class="menu-img img-left" />
+    </div>
+    <div class="column middle">
+      <canvas id="myCanvas" width="600" height="400"></canvas>
     </div>
 
+    <div class="column">
+      <img src="image/right.png" class="menu-img img-right" />
+    </div>
+  </div> -->
+  <aside id="left-part">
+    <img src="image/left.png" class="menu-img img-left" />
+   </aside>
+  <main id="main-content">
+
+
+      <section id="canvas-part">
+        <canvas id="myCanvas" width="900" height="400"></canvas>
+      </section>
+
+
+  </main>    
+  <aside id="right-part">
+    <img src="image/right.png" class="menu-img img-right" />
+  </aside>
+  <div class="clear"></div>
 </body>
 </html>
