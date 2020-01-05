@@ -2,9 +2,19 @@ Array.prototype.random = function() {
   return this[Math.round(Math.random() * (this.length - 1))];
 };
 
+const colorList = ["orange", "green", "red", "blue", "indigo"];
+
 // expand with color, background etc.
-function drawTextBG(ctx, txt, font, x, y, color, width, height) {
-  const minWidth = 27;
+function drawTextBG(
+  ctx,
+  txt,
+  x,
+  y,
+  color,
+  width,
+  height,
+  textColor = "#f9f9f9"
+) {
   /// lets save current state as we make a lot of changes
   ctx.save();
 
@@ -28,7 +38,7 @@ function drawTextBG(ctx, txt, font, x, y, color, width, height) {
   /// text color
   // ctx.fillStyle = color;
   // ctx.fillStyle = "#000";
-  ctx.fillStyle = "#f9f9f9";
+  ctx.fillStyle = textColor;
 
   /// draw text on top
   ctx.fillText(txt === "M" || txt === "m" ? txt : ` ${txt} `, x, y);
@@ -48,8 +58,59 @@ function drawBorder(ctx, xPos, yPos, width, height, color, thickness = 1) {
   );
 }
 
-const colorList = ["orange", "green", "red", "blue", "indigo"];
+function convertStringTo2DArray(inputStr, maxChar) {
+  const inputcharList = inputStr.split("");
+  const inputTextArr = [];
+  let st = 0;
+  let counter = 0;
+  let isRunning = true;
 
-const font = 30;
-const line = 30;
-const minWidth = 27;
+  while (isRunning) {
+    inputTextArr[counter] = [];
+    let newLineFound = false;
+    const len = st + maxChar;
+    let j = st;
+    for (; j < len; j++) {
+      if (
+        typeof inputcharList[j] === "undefined" ||
+        inputcharList[j] === undefined
+      ) {
+        inputTextArr[counter].push(" ");
+      } else if (inputcharList[j] !== "\n") {
+        inputTextArr[counter].push(inputcharList[j]);
+      } else {
+        newLineFound = true;
+        break;
+      }
+    }
+
+    if (newLineFound) {
+      for (let k = j; k < len; k++) {
+        inputTextArr[counter].push(" ");
+      }
+      counter++;
+      inputTextArr[counter] = Array(maxChar).fill(" ");
+      st = j + 2;
+      counter++;
+    } else {
+      st += maxChar;
+      counter++;
+    }
+
+    if (typeof inputcharList[j] === "undefined") {
+      isRunning = false;
+    }
+  }
+
+  return inputTextArr;
+}
+
+function getColorData(charList) {
+  // charSchemaProsObj
+  return charList.reduce((total, current) => {
+    total[`${charSchemaProsObj[current]}_1`] = colorList.random();
+
+    total[`${charSchemaProsObj[current]}_2`] = colorList.random();
+    return total;
+  }, {});
+}

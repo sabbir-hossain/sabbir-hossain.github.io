@@ -53,3 +53,14 @@ const charSchemaProsObj = {
   R: 18,
   S: 19
 };
+
+function getSchemaData(charList) {
+  let schemaCharBitLen = 0;
+  let schemaCharLen = 0;
+  for (let i = 0, lenx = charList.length; i < lenx; i++) {
+    schemaCharLen = charSchemaList[charList[i]].length;
+    schemaCharBitLen += charSchemaList[charList[i]][0].length;
+  }
+
+  return { schemaCharBitLen, schemaCharLen };
+}

@@ -9,7 +9,6 @@ function draw_animation() {
   const ctx = canvas.getContext("2d");
 
   const canvasWidth = window.innerWidth * 0.75;
-  console.log({ canvasWidth, val: canvasWidth - 100 });
 
   canvas.width = canvasWidth;
   canvas.height = window.innerHeight - 100;
