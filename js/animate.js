@@ -19,7 +19,7 @@ function draw_animation() {
   const bgContext = bgCanvas.getContext("2d").canvas;
 
   let startY = 50;
-  let startX = 50;
+  let startX = 0;
 
   displayAnimation(ctx, startX, startY);
 }

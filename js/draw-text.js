@@ -311,6 +311,102 @@ const inputText = [
   ]
 ];
 
+const inputStr = `Hi, I am sabbir. A very ordinary Full-Stack application developer.\r\n
+  As a software engineer, My worst nightmare is that, one day someone told me,\r\n
+  "So you are software engineer, can you fix my smartphone/computer?"\r\n
+  `;
+
+function displayAnimation(ctx, x, y) {
+  const displayRatio = 0.9;
+
+  const charList = ["J", "S"];
+
+  const totalChar = inputStr.length;
+  const cW = ctx.canvas.width;
+  const cH = ctx.canvas.height;
+
+  const total = (cW - x * 2) * (cH - y * 2);
+  const val = total / totalChar;
+  const width = Math.round(Math.sqrt(val) * 0.8);
+  // const height = Math.round(width * 0.75);
+  const height = width;
+  const maxChar = Math.round(cW / width);
+  const maxLine = Math.ceil(totalChar / maxChar);
+  console.log({ width, height });
+
+  const inputcharList = inputStr.split("");
+  const inputTextArr = [];
+  let st = 0;
+  for (let i = 0; i < maxLine; i++) {
+    const strArr = inputcharList.slice(st, st + maxChar);
+    inputTextArr.push(strArr);
+    st += maxChar;
+  }
+
+  // charSchemaProsObj
+  const colorData = charList.reduce((total, current) => {
+    total[`${charSchemaProsObj[current]}_1`] =
+      colorList[Math.floor(Math.random() * colorList.length)];
+
+    total[`${charSchemaProsObj[current]}_2`] =
+      colorList[Math.floor(Math.random() * colorList.length)];
+    return total;
+  }, {});
+
+  let schemaCharBitLen = 0;
+  let schemaCharLen = 0;
+  for (let i = 0, lenx = charList.length; i < lenx; i++) {
+    schemaCharLen = charSchemaList[charList[i]].length;
+    schemaCharBitLen += charSchemaList[charList[i]][0].length;
+  }
+
+  const result = scaleUpAllCharList(
+    inputTextArr,
+    charList,
+    displayRatio,
+    {
+      maxLine,
+      maxChar
+    },
+    { schemaCharLen, schemaCharBitLen }
+  );
+
+  const animateInterval = setInterval(
+    () => animate(ctx, result, colorData, x, y, width, height),
+    70
+  );
+
+  setTimeout(function() {
+    clearInterval(animateInterval);
+    drawFixedText(ctx, inputTextArr, result, colorData, x, y, width, height);
+  }, 500);
+
+  function animate(ctx, result, colorData, x, y, width, height) {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.save();
+    let startY = y;
+    for (let i = 0, len = inputTextArr.length; i < len; i++) {
+      let startX = x;
+      for (let j = 0, len2 = inputTextArr[i].length; j < len2; j++) {
+        let color = "#333";
+        if (typeof colorData[result[i][j]] !== "undefined") {
+          color = colorData[result[i][j]];
+        }
+
+        const input = inputTextArr.random();
+        const val = input.random();
+        drawTextBG(ctx, val, font, startX, startY, color, width, height);
+        // startX += minWidth + 5;
+        startX += width;
+      }
+      // startY += line + 7;
+      startY += height;
+    }
+  }
+  ctx.restore();
+}
+
+/*
 function displayAnimation(ctx, x, y) {
   const maxLine = inputText.length;
   const maxChar = inputText[0].length;
@@ -335,14 +431,6 @@ function displayAnimation(ctx, x, y) {
     schemaCharLen = charSchemaList[charList[i]].length;
     schemaCharBitLen += charSchemaList[charList[i]][0].length;
   }
-
-  console.log(
-    {
-      maxLine,
-      maxChar
-    },
-    { schemaCharLen, schemaCharBitLen }
-  );
 
   const result = scaleUpAllCharList(
     inputText,
@@ -372,7 +460,7 @@ function displayAnimation(ctx, x, y) {
     for (let i = 0, len = inputText.length; i < len; i++) {
       let startX = x;
       for (let j = 0, len2 = inputText[i].length; j < len2; j++) {
-        let color = "#222";
+        let color = "#333";
         if (typeof colorData[result[i][j]] !== "undefined") {
           color = colorData[result[i][j]];
         }
@@ -389,23 +477,42 @@ function displayAnimation(ctx, x, y) {
   }
   ctx.restore();
 }
+*/
 
-function drawFixedText(ctx, result, colorData, x, y) {
+function drawFixedText(
+  ctx,
+  inputTextArr,
+  result,
+  colorData,
+  x,
+  y,
+  width,
+  height
+) {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   let startY = y;
-  for (let i = 0, len = inputText.length; i < len; i++) {
+  for (let i = 0, len = inputTextArr.length; i < len; i++) {
     let startX = x;
-    for (let j = 0, len2 = inputText[i].length; j < len2; j++) {
+    for (let j = 0, len2 = inputTextArr[i].length; j < len2; j++) {
       let color = "#333";
       if (typeof colorData[result[i][j]] !== "undefined") {
         color = colorData[result[i][j]];
       }
 
-      drawTextBG(ctx, inputText[i][j], font, startX, startY, color);
+      drawTextBG(
+        ctx,
+        inputTextArr[i][j],
+        font,
+        startX,
+        startY,
+        color,
+        width,
+        height
+      );
       // startX += minWidth + 5;
-      startX += minWidth;
+      startX += width;
     }
     // startY += line + 7;
-    startY += line;
+    startY += height;
   }
 }

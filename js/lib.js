@@ -3,13 +3,13 @@ Array.prototype.random = function() {
 };
 
 // expand with color, background etc.
-function drawTextBG(ctx, txt, font, x, y, color) {
+function drawTextBG(ctx, txt, font, x, y, color, width, height) {
   const minWidth = 27;
   /// lets save current state as we make a lot of changes
   ctx.save();
 
   /// set font
-  ctx.font = `${font}px Calibri`;
+  ctx.font = `${height}px Calibri`;
 
   /// draw text from top - makes life easier at the moment
   ctx.textBaseline = "top";
@@ -19,10 +19,10 @@ function drawTextBG(ctx, txt, font, x, y, color) {
   ctx.fillStyle = color;
 
   // get width of text
-  var width = ctx.measureText(txt).width;
+  var wd = ctx.measureText(txt).width;
 
   // draw background rect assuming height of font
-  ctx.fillRect(x, y, minWidth, parseInt(font, 10));
+  ctx.fillRect(x, y, width, parseInt(height, 10));
   // drawBorder(ctx, x, y, minWidth, parseInt(font, 10), color, (thickness = 1));
 
   /// text color
