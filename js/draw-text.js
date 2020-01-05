@@ -3,6 +3,7 @@ const inputText = [
     "H",
     "i",
     ",",
+    " ",
     "I",
     " ",
     "a",
@@ -21,30 +22,43 @@ const inputText = [
     "v",
     "e",
     "r",
-    "y"
-  ],
-  [
+    "y",
     " ",
     "o",
     "r",
     "i",
     "d",
+    "-"
+  ],
+  [
     "i",
     "n",
     "a",
     "r",
     "y",
     " ",
-    "f",
+    "F",
     "u",
     "l",
     "l",
-    "s",
+    "-",
+    "S",
     "t",
     "a",
     "c",
     "k",
     " ",
+    "a",
+    "p",
+    "p",
+    "l",
+    "i",
+    "c",
+    "a",
+    "t",
+    "i",
+    "o",
+    "n",
     " "
   ],
   [
@@ -58,7 +72,14 @@ const inputText = [
     "e",
     "r",
     ".",
-    "  ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
     " ",
     " ",
     " ",
@@ -72,10 +93,68 @@ const inputText = [
     " "
   ],
   [
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ],
+  [
+    "A",
+    "s",
+    " ",
+    "a",
+    " ",
+    "S",
+    "o",
+    "f",
+    "t",
+    "w",
+    "a",
+    "r",
+    "e",
+    " ",
+    "E",
+    "n",
+    "g",
+    "i",
+    "n",
+    "e",
+    "e",
+    "r",
+    ",",
+    " ",
     "M",
     "y",
     " ",
     "w",
+    "-"
+  ],
+  [
     "o",
     "r",
     "s",
@@ -93,13 +172,23 @@ const inputText = [
     " ",
     "i",
     "s",
-    " "
-  ],
-  [
+    " ",
     "t",
     "h",
     "a",
     "t",
+    ",",
+    " ",
+    "s",
+    "o",
+    "m",
+    "e",
+    "-"
+  ],
+  [
+    "d",
+    "a",
+    "y",
     " ",
     "s",
     "o",
@@ -116,16 +205,18 @@ const inputText = [
     " ",
     "m",
     "e",
+    ",",
     " ",
-    "s"
-  ],
-  [
+    '"',
+    "s",
     "o",
     " ",
     "y",
     "o",
     "u",
-    " ",
+    " "
+  ],
+  [
     "a",
     "r",
     "e",
@@ -141,9 +232,7 @@ const inputText = [
     " ",
     "e",
     "n",
-    "g"
-  ],
-  [
+    "g",
     "i",
     "n",
     "e",
@@ -156,6 +245,9 @@ const inputText = [
     "n",
     " ",
     "y",
+    "-"
+  ],
+  [
     "o",
     "u",
     " ",
@@ -163,11 +255,11 @@ const inputText = [
     "i",
     "x",
     " ",
-    "m",
-    "y",
-    " "
-  ],
-  [
+    "t",
+    "h",
+    "i",
+    "s",
+    " ",
     "s",
     "m",
     "a",
@@ -184,10 +276,36 @@ const inputText = [
     "m",
     "p",
     "u",
+    "-"
+  ],
+  [
     "t",
     "e",
     "r",
     "?",
+    '"',
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
     " ",
     " "
   ]
@@ -218,6 +336,14 @@ function displayAnimation(ctx, x, y) {
     schemaCharBitLen += charSchemaList[charList[i]][0].length;
   }
 
+  console.log(
+    {
+      maxLine,
+      maxChar
+    },
+    { schemaCharLen, schemaCharBitLen }
+  );
+
   const result = scaleUpAllCharList(
     inputText,
     charList,
@@ -229,16 +355,15 @@ function displayAnimation(ctx, x, y) {
     { schemaCharLen, schemaCharBitLen }
   );
 
-  let counter = 0;
   const animateInterval = setInterval(
-    () => animate(ctx, result, colorData, x, y, counter),
+    () => animate(ctx, result, colorData, x, y),
     70
   );
 
   setTimeout(function() {
     clearInterval(animateInterval);
     drawFixedText(ctx, result, colorData, x, y);
-  }, 1000 * 2);
+  }, 500);
 
   function animate(ctx, result, colorData, x, y) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -271,7 +396,7 @@ function drawFixedText(ctx, result, colorData, x, y) {
   for (let i = 0, len = inputText.length; i < len; i++) {
     let startX = x;
     for (let j = 0, len2 = inputText[i].length; j < len2; j++) {
-      let color = "#222";
+      let color = "#333";
       if (typeof colorData[result[i][j]] !== "undefined") {
         color = colorData[result[i][j]];
       }
