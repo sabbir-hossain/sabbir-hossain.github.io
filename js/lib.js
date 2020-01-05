@@ -13,7 +13,6 @@ function drawTextBG(ctx, txt, font, x, y, color) {
 
   /// draw text from top - makes life easier at the moment
   ctx.textBaseline = "top";
-  // ctx.textAlign = "end";
 
   /// color for background
   // ctx.fillStyle = "#f50";
@@ -24,6 +23,7 @@ function drawTextBG(ctx, txt, font, x, y, color) {
 
   // draw background rect assuming height of font
   ctx.fillRect(x, y, minWidth, parseInt(font, 10));
+  // drawBorder(ctx, x, y, minWidth, parseInt(font, 10), color, (thickness = 1));
 
   /// text color
   // ctx.fillStyle = color;
@@ -31,9 +31,25 @@ function drawTextBG(ctx, txt, font, x, y, color) {
   ctx.fillStyle = "#f9f9f9";
 
   /// draw text on top
-  ctx.fillText(txt, x, y);
+  ctx.fillText(txt === "M" || txt === "m" ? txt : ` ${txt} `, x, y);
   // ctx.strokeText(txt, x, y);
 
   /// restore original state
   ctx.restore();
 }
+
+function drawBorder(ctx, xPos, yPos, width, height, color, thickness = 1) {
+  ctx.fillStyle = color;
+  ctx.fillRect(
+    xPos - thickness,
+    yPos - thickness,
+    width + thickness * 2,
+    height + thickness * 2
+  );
+}
+
+const colorList = ["orange", "green", "red", "blue", "indigo"];
+
+const font = 30;
+const line = 30;
+const minWidth = 27;

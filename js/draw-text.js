@@ -1,305 +1,286 @@
 const inputText = [
   [
+    "H",
+    "i",
+    ",",
+    "I",
+    " ",
+    "a",
+    "m",
+    " ",
     "S",
-    "e",
-    "d",
-    " ",
-    "u",
-    "t",
-    " ",
-    "p",
-    "e",
-    "r",
-    "s",
-    "p",
-    "i",
-    "c",
-    "i",
-    "a",
-    "t",
-    "i",
-    "s",
-    " ",
-    "u",
-    "n",
-    "d",
-    "e"
-  ],
-  [
-    "o",
-    "m",
-    "n",
-    "i",
-    "s",
-    " ",
-    "i",
-    "s",
-    "t",
-    "e",
-    " ",
-    "n",
-    "a",
-    "t",
-    "u",
-    "s",
-    " ",
-    "e",
-    "r",
-    "r",
-    "o",
-    "r",
-    " ",
-    " "
-  ],
-  [
-    "s",
-    "i",
-    "t",
-    " ",
-    "v",
-    "o",
-    "l",
-    "u",
-    "p",
-    "t",
-    "a",
-    "t",
-    "e",
-    "m",
-    " ",
-    "a",
-    "c",
-    "c",
-    "u",
-    "s",
-    "a",
-    "n",
-    "t",
-    "-"
-  ],
-  [
-    "i",
-    "u",
-    "m",
-    " ",
-    "d",
-    "o",
-    "l",
-    "o",
-    "r",
-    "e",
-    "m",
-    "q",
-    "u",
-    "e",
-    " ",
-    "d",
-    "o",
-    "l",
-    "o",
-    "r",
-    " ",
-    "s",
-    "i",
-    "t"
-  ],
-  [
-    "l",
-    "a",
-    "u",
-    "d",
-    "a",
-    "n",
-    "t",
-    "i",
-    "u",
-    "m",
-    ",",
-    " ",
-    "t",
-    "o",
-    "t",
-    "a",
-    "m",
-    " ",
-    "r",
-    "e",
-    "m",
-    " ",
-    " ",
-    " "
-  ],
-  [
-    "a",
-    "p",
-    "e",
-    "r",
-    "i",
-    "a",
-    "m",
-    ",",
-    " ",
-    "e",
-    "a",
-    "q",
-    "u",
-    "e",
-    " ",
-    "i",
-    "p",
-    "s",
-    "a",
-    " ",
-    "q",
-    "u",
-    "a",
-    "e"
-  ],
-  [
     "a",
     "b",
-    " ",
+    "b",
     "i",
-    "l",
-    "l",
-    "o",
-    " ",
-    "i",
-    "n",
-    "v",
-    "e",
-    "n",
-    "t",
-    "o",
     "r",
-    "e",
+    ".",
+    " ",
+    "A",
     " ",
     "v",
     "e",
     "r",
-    "i",
-    "t",
-    "-"
+    "y"
   ],
   [
-    "a",
-    "t",
+    " ",
+    "o",
+    "r",
     "i",
-    "s",
-    " ",
-    "e",
-    "t",
-    " ",
-    "q",
-    "u",
-    "a",
-    "s",
+    "d",
     "i",
-    " ",
+    "n",
     "a",
     "r",
+    "y",
+    " ",
+    "f",
+    "u",
+    "l",
+    "l",
+    "s",
+    "t",
+    "a",
     "c",
+    "k",
+    " ",
+    " "
+  ],
+  [
+    "d",
+    "e",
+    "v",
+    "e",
+    "l",
+    "o",
+    "p",
+    "e",
+    "r",
+    ".",
+    "  ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ],
+  [
+    "M",
+    "y",
+    " ",
+    "w",
+    "o",
+    "r",
+    "s",
+    "t",
+    " ",
+    "n",
+    "i",
+    "g",
     "h",
+    "t",
+    "m",
+    "a",
+    "r",
+    "e",
     " ",
     "i",
-    "t",
-    "e",
-    "c",
-    "-"
+    "s",
+    " "
   ],
   [
     "t",
+    "h",
+    "a",
+    "t",
+    " ",
+    "s",
+    "o",
+    "m",
+    "e",
+    "o",
+    "n",
+    "e",
+    " ",
+    "t",
+    "o",
+    "l",
+    "d",
+    " ",
+    "m",
+    "e",
+    " ",
+    "s"
+  ],
+  [
     "o",
     " ",
-    "b",
-    "e",
+    "y",
+    "o",
+    "u",
+    " ",
     "a",
-    "t",
-    "a",
+    "r",
     "e",
     " ",
-    "v",
-    "i",
+    "s",
+    "o",
+    "f",
     "t",
+    "w",
     "a",
+    "r",
     "e",
     " ",
-    "d",
+    "e",
+    "n",
+    "g"
+  ],
+  [
     "i",
+    "n",
+    "e",
+    "e",
+    "r",
+    ",",
+    " ",
     "c",
+    "a",
+    "n",
+    " ",
+    "y",
+    "o",
+    "u",
+    " ",
+    "f",
+    "i",
+    "x",
+    " ",
+    "m",
+    "y",
+    " "
+  ],
+  [
+    "s",
+    "m",
+    "a",
+    "r",
     "t",
-    " ",
-    " ",
+    "p",
+    "h",
+    "o",
+    "n",
+    "e",
+    "/",
+    "c",
+    "o",
+    "m",
+    "p",
+    "u",
+    "t",
+    "e",
+    "r",
+    "?",
     " ",
     " "
   ]
 ];
 
-// get a reference to the canvas
-const canvas = document.getElementById("myCanvas");
+function displayAnimation(ctx, x, y) {
+  const maxLine = inputText.length;
+  const maxChar = inputText[0].length;
 
-// get a reference to the drawing context
-const ctx = canvas.getContext("2d");
+  const displayRatio = 0.9;
 
-const cW = ctx.canvas.width;
-const cH = ctx.canvas.height;
+  const charList = ["J", "S"];
 
-let startY = 50;
-let startX = 50;
+  // charSchemaProsObj
+  const colorData = charList.reduce((total, current) => {
+    total[`${charSchemaProsObj[current]}_1`] =
+      colorList[Math.floor(Math.random() * colorList.length)];
 
-const maxLine = inputText.length;
-const maxChar = inputText[0].length;
+    total[`${charSchemaProsObj[current]}_2`] =
+      colorList[Math.floor(Math.random() * colorList.length)];
+    return total;
+  }, {});
 
-const displayRatio = 0.9;
+  let schemaCharBitLen = 0;
+  let schemaCharLen = 0;
+  for (let i = 0, lenx = charList.length; i < lenx; i++) {
+    schemaCharLen = charSchemaList[charList[i]].length;
+    schemaCharBitLen += charSchemaList[charList[i]][0].length;
+  }
 
-const charList = ["J", "S"];
+  const result = scaleUpAllCharList(
+    inputText,
+    charList,
+    displayRatio,
+    {
+      maxLine,
+      maxChar
+    },
+    { schemaCharLen, schemaCharBitLen }
+  );
 
-const colorList = ["orange", "green", "red", "blue", "indigo"];
-// charSchemaProsObj
-const colorData = charList.reduce((total, current) => {
-  total[`${charSchemaProsObj[current]}_1`] =
-    colorList[Math.floor(Math.random() * colorList.length)];
+  let counter = 0;
+  const animateInterval = setInterval(
+    () => animate(ctx, result, colorData, x, y, counter),
+    70
+  );
 
-  total[`${charSchemaProsObj[current]}_2`] =
-    colorList[Math.floor(Math.random() * colorList.length)];
-  return total;
-}, {});
+  setTimeout(function() {
+    clearInterval(animateInterval);
+    drawFixedText(ctx, result, colorData, x, y);
+  }, 1000 * 2);
 
-let schemaCharBitLen = 0;
-let schemaCharLen = 0;
-for (let i = 0, lenx = charList.length; i < lenx; i++) {
-  schemaCharLen = charSchemaList[charList[i]].length;
-  schemaCharBitLen += charSchemaList[charList[i]][0].length;
+  function animate(ctx, result, colorData, x, y) {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.save();
+    let startY = y;
+    for (let i = 0, len = inputText.length; i < len; i++) {
+      let startX = x;
+      for (let j = 0, len2 = inputText[i].length; j < len2; j++) {
+        let color = "#222";
+        if (typeof colorData[result[i][j]] !== "undefined") {
+          color = colorData[result[i][j]];
+        }
+
+        const input = inputText.random();
+        const val = input.random();
+        drawTextBG(ctx, val, font, startX, startY, color);
+        // startX += minWidth + 5;
+        startX += minWidth;
+      }
+      // startY += line + 7;
+      startY += line;
+    }
+  }
+  ctx.restore();
 }
 
-const result = scaleUpAllCharList(
-  inputText,
-  charList,
-  displayRatio,
-  {
-    maxLine,
-    maxChar
-  },
-  { schemaCharLen, schemaCharBitLen }
-);
-console.log({ colorData, result });
+function drawFixedText(ctx, result, colorData, x, y) {
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  let startY = y;
+  for (let i = 0, len = inputText.length; i < len; i++) {
+    let startX = x;
+    for (let j = 0, len2 = inputText[i].length; j < len2; j++) {
+      let color = "#222";
+      if (typeof colorData[result[i][j]] !== "undefined") {
+        color = colorData[result[i][j]];
+      }
 
-// drawTextBG(ctx, txt, font, x, y, color)
-startY = 50;
-const font = 30;
-const line = 30;
-const minWidth = 27;
-
-for (let i = 0, len = inputText.length; i < len; i++) {
-  startX = 50;
-  for (let j = 0, len2 = inputText[i].length; j < len2; j++) {
-    let color = "#222";
-    if (typeof colorData[result[i][j]] !== "undefined") {
-      color = colorData[result[i][j]];
+      drawTextBG(ctx, inputText[i][j], font, startX, startY, color);
+      // startX += minWidth + 5;
+      startX += minWidth;
     }
-
-    drawTextBG(ctx, inputText[i][j], font, startX, startY, color);
-    startX += minWidth + 5;
+    // startY += line + 7;
+    startY += line;
   }
-  startY += line + 7;
 }
