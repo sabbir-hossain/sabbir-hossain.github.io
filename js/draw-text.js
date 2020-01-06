@@ -2,11 +2,7 @@ const inputStr = `Hi, I am sabbir. A very ordinary Full-Stack application develo
 As a software engineer, My worst nightmare is that, one day someone told me,\n
 "So you are software engineer, can you fix my smartphone/computer?"`;
 
-function displayAnimation(ctx, x, y) {
-  const displayRatio = 0.9;
-
-  const charList = ["J", "S"];
-
+function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const totalChar = inputStr.length;
   const cW = ctx.canvas.width;
   const cH = ctx.canvas.height;
@@ -58,7 +54,14 @@ function displayAnimation(ctx, x, y) {
       let startX = x;
       for (let j = 0, len2 = inputTextArr[i].length; j < len2; j++) {
         let color = "#333";
-        if (typeof colorData[result[i][j]] !== "undefined") {
+        // if (typeof colorData[result[i][j]] !== "undefined") {
+        //   color = colorData[result[i][j]];
+        // }
+
+        if (
+          typeof result[i] !== "undefined" &&
+          typeof colorData[result[i][j]] !== "undefined"
+        ) {
           color = colorData[result[i][j]];
         }
 

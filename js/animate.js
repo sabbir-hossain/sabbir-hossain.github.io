@@ -1,8 +1,28 @@
+let currentPage = 0;
+
 window.addEventListener("load", function(event) {
-  draw_animation();
+  currentPage = 1;
+  draw_animation(currentPage);
 });
 
-function draw_animation() {
+document.getElementById("backwareDiv").addEventListener("click", evt => {
+  evt.preventDefault();
+  currentPage--;
+
+  if (currentPage >= 0 && currentPage < data.length) {
+    draw_animation(currentPage);
+  }
+});
+
+document.getElementById("forwardDiv").addEventListener("click", evt => {
+  evt.preventDefault();
+  currentPage++;
+  if (currentPage >= 0 && currentPage < data.length) {
+    draw_animation(currentPage);
+  }
+});
+
+function draw_animation(currentPage) {
   // get a reference to the canvas
   const canvas_id = "myCanvas";
   const canvas = document.getElementById(canvas_id);
@@ -19,6 +39,16 @@ function draw_animation() {
 
   let startY = 50;
   let startX = 0;
-
-  displayAnimation(ctx, startX, startY);
+  const { text = "", shadowText = [], displayRatio = 0 } =
+    data[currentPage] || {};
+  // displayAnimation(ctx, startX, startY);
+  console.log({
+    text,
+    shadowText,
+    startX,
+    startY,
+    currentPage,
+    d: data[currentPage]
+  });
+  displayAnimation(ctx, text, shadowText, displayRatio, startX, startY);
 }
