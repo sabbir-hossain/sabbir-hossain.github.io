@@ -31,3 +31,27 @@ function scaleUpCharColumn(info = [], portion) {
   }
   return data;
 }
+
+function scaleUpCharAgain(result, inputTextArr, maxChar) {
+  const line = result.length;
+  const inputLine = inputTextArr.length;
+
+  const resultCharLen = result[0].length;
+  const inputCharLen = inputTextArr[0].length;
+
+  const limit2 = Math.round((inputCharLen - resultCharLen) / 2);
+
+  for (let i = 0; i < line; i++) {
+    for (let j = 0; j < limit2; j++) {
+      result[i].unshift(0);
+    }
+  }
+
+  const limit = Math.round((inputLine - line) / 2);
+  for (let i = 0; i < limit - 1; i++) {
+    const arr = Array(maxChar).fill(0);
+    result.unshift(arr);
+  }
+
+  return result;
+}

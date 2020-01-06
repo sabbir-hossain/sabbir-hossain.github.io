@@ -1,14 +1,9 @@
-const inputStr = `Hi, I am sabbir. A very ordinary Full-Stack application developer.\n
-As a software engineer, My worst nightmare is that, one day someone told me,\n
-"So you are software engineer, can you fix my smartphone/computer?"`;
-
 function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const colorData = getColorData(charList);
   const { schemaCharBitLen, schemaCharLen } = getSchemaData(charList);
 
-  const result = scaleUpAllCharList(charList, displayRatio, schemaCharLen);
-  console.log({ result });
-
+  let result = scaleUpAllCharList(charList, displayRatio, schemaCharLen);
+  console.log({ result: JSON.parse(JSON.stringify(result)) });
   const totalChar = inputStr.length;
   const cW = ctx.canvas.width;
   const cH = ctx.canvas.height;
@@ -17,21 +12,19 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const val = total / totalChar;
   let width = Math.round(Math.sqrt(val) * 0.8);
 
-  // const height = Math.round(width * 0.75);
-
   let maxChar = Math.round(cW / width);
-  let maxLine = Math.ceil(totalChar / maxChar);
-  // console.log({ width, height, result, maxLine, maxChar });
+
   if (result[0].length > maxChar) {
     const prevMaxChar = maxChar;
     maxChar = result[0].length;
-    width = (prevMaxChar * width) / maxChar;
+    width = Math.round((prevMaxChar * width) / maxChar) - 1;
+    shouldUpdate = true;
   }
   let height = width;
-  console.log({ width, height, result, maxLine, maxChar });
-  const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
 
-  console.log({ inputTextArr });
+  const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
+  result = scaleUpCharAgain(result, inputTextArr, maxChar);
+  console.log({ result: JSON.parse(JSON.stringify(result)) });
 
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),
@@ -52,9 +45,6 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
       let startX = x;
       for (let j = 0, len2 = inputTextArr[i].length; j < len2; j++) {
         let color = "#333";
-        // if (typeof colorData[result[i][j]] !== "undefined") {
-        //   color = colorData[result[i][j]];
-        // }
 
         if (
           typeof result[i] !== "undefined" &&
