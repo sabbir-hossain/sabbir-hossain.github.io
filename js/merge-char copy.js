@@ -7,7 +7,7 @@ function scaleUpAllCharList(
   { schemaCharLen, schemaCharBitLen }
 ) {
   const margeCharList = mergeAllCharList(charList, schemaCharLen);
-  console.log({ maxChar, margeCharList, v: margeCharList[0].length });
+
   const scaleX = Math.floor(maxChar / margeCharList[0].length);
   const scaleY = Math.floor(maxLine / schemaCharLen);
 
@@ -23,7 +23,7 @@ function scaleUpAllCharList(
   const multiplyWithRatio = Math.floor(displayRatio * maxLine);
   const firstPortion = maxLine - multiplyWithRatio;
   const secondPortion = maxLine - firstPortion;
-  console.log({ scaleX, scaleY, inScaleY, firstPortion });
+
   for (let i = 0, len = margeCharList.length; i < len; i++) {
     let portion = 0;
     if (i < firstPortion) {

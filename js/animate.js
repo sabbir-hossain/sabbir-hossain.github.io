@@ -1,7 +1,7 @@
 let currentPage = 0;
 
 window.addEventListener("load", function(event) {
-  currentPage = 1;
+  currentPage = 0;
   draw_animation(currentPage);
 });
 

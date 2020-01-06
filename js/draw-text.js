@@ -3,7 +3,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const { schemaCharBitLen, schemaCharLen } = getSchemaData(charList);
 
   let result = scaleUpAllCharList(charList, displayRatio, schemaCharLen);
-  console.log({ result: JSON.parse(JSON.stringify(result)) });
+
   const totalChar = inputStr.length;
   const cW = ctx.canvas.width;
   const cH = ctx.canvas.height;
@@ -24,7 +24,6 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
 
   const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
   result = scaleUpCharAgain(result, inputTextArr, maxChar);
-  console.log({ result: JSON.parse(JSON.stringify(result)) });
 
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),

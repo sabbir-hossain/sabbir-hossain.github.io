@@ -2,7 +2,19 @@ Array.prototype.random = function() {
   return this[Math.round(Math.random() * (this.length - 1))];
 };
 
-const colorList = ["orange", "green", "red", "blue", "indigo"];
+const colorList = [
+  "rgba(75,192,192,0.7)",
+  "rgba(255, 99, 132,0.7)",
+  "rgba(0,0,128,0.7)",
+  "rgba(0,128,0,0.7)",
+  "rgba(128,0,0,0.7)",
+  "rgba(128,128,0,0.7)",
+  "rgba(0,128,128,0.7)",
+  "rgba(128,0,128,0.7)",
+  "rgba(0,255,255,0.7)",
+  // "rgba(255,255,0,0.7)",
+  "rgba(255,0,255,0.7)"
+];
 
 // expand with color, background etc.
 function drawTextBG(
