@@ -4,6 +4,10 @@ As a software engineer, My worst nightmare is that, one day someone told me,\n
 
 function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const colorData = getColorData(charList);
+  const { schemaCharBitLen, schemaCharLen } = getSchemaData(charList);
+
+  const result = scaleUpAllCharList(charList, displayRatio, schemaCharLen);
+  console.log({ result });
 
   const totalChar = inputStr.length;
   const cW = ctx.canvas.width;
@@ -12,22 +16,22 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const total = (cW - x * 2) * (cH - y * 2);
   const val = total / totalChar;
   let width = Math.round(Math.sqrt(val) * 0.8);
-  width = width > 1000 ? 1000 : width;
+
   // const height = Math.round(width * 0.75);
-  const height = width;
-  const maxChar = Math.round(cW / width);
+
+  let maxChar = Math.round(cW / width);
   let maxLine = Math.ceil(totalChar / maxChar);
-  console.log({ totalChar, maxLine, maxChar });
-
-  const { schemaCharBitLen, schemaCharLen } = getSchemaData(charList);
-  console.log({ schemaCharBitLen, schemaCharLen, colorData });
-
-  const result = scaleUpAllCharList(charList, displayRatio, schemaCharLen);
-  console.log({ result });
-
+  // console.log({ width, height, result, maxLine, maxChar });
+  if (result[0].length > maxChar) {
+    const prevMaxChar = maxChar;
+    maxChar = result[0].length;
+    width = (prevMaxChar * width) / maxChar;
+  }
+  let height = width;
+  console.log({ width, height, result, maxLine, maxChar });
   const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
 
-  maxLine = inputTextArr.length;
+  console.log({ inputTextArr });
 
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),

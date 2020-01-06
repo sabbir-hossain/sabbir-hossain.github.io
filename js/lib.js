@@ -58,7 +58,7 @@ function drawBorder(ctx, xPos, yPos, width, height, color, thickness = 1) {
   );
 }
 
-function convertStringTo2DArray(inputStr, maxChar) {
+function convertStringTo2DArray(inputStr, maxChar, result) {
   const inputcharList = inputStr.split("");
   const inputTextArr = [];
   let st = 0;
