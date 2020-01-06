@@ -3,6 +3,8 @@ As a software engineer, My worst nightmare is that, one day someone told me,\n
 "So you are software engineer, can you fix my smartphone/computer?"`;
 
 function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
+  const colorData = getColorData(charList);
+
   const totalChar = inputStr.length;
   const cW = ctx.canvas.width;
   const cH = ctx.canvas.height;
@@ -15,17 +17,14 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const height = width;
   const maxChar = Math.round(cW / width);
   let maxLine = Math.ceil(totalChar / maxChar);
-
+  console.log({ totalChar, maxLine, maxChar });
   const inputTextArr = convertStringTo2DArray(inputStr, maxChar);
 
-  const colorData = getColorData(charList);
-
   const { schemaCharBitLen, schemaCharLen } = getSchemaData(charList);
-
+  console.log({ schemaCharBitLen, schemaCharLen, colorData });
   maxLine = inputTextArr.length;
 
   const result = scaleUpAllCharList(
-    inputTextArr,
     charList,
     displayRatio,
     {
@@ -34,7 +33,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
     },
     { schemaCharLen, schemaCharBitLen }
   );
-
+  console.log({ result });
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),
     75

@@ -106,7 +106,6 @@ function convertStringTo2DArray(inputStr, maxChar) {
 }
 
 function getColorData(charList) {
-  // charSchemaProsObj
   return charList.reduce((total, current) => {
     total[`${charSchemaProsObj[current]}_1`] = colorList.random();
 
