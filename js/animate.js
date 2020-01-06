@@ -42,13 +42,6 @@ function draw_animation(currentPage) {
   const { text = "", shadowText = [], displayRatio = 0 } =
     data[currentPage] || {};
   // displayAnimation(ctx, startX, startY);
-  console.log({
-    text,
-    shadowText,
-    startX,
-    startY,
-    currentPage,
-    d: data[currentPage]
-  });
+
   displayAnimation(ctx, text, shadowText, displayRatio, startX, startY);
 }

@@ -18,22 +18,17 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const maxChar = Math.round(cW / width);
   let maxLine = Math.ceil(totalChar / maxChar);
   console.log({ totalChar, maxLine, maxChar });
-  const inputTextArr = convertStringTo2DArray(inputStr, maxChar);
 
   const { schemaCharBitLen, schemaCharLen } = getSchemaData(charList);
   console.log({ schemaCharBitLen, schemaCharLen, colorData });
+
+  const result = scaleUpAllCharList(charList, displayRatio, schemaCharLen);
+  console.log({ result });
+
+  const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
+
   maxLine = inputTextArr.length;
 
-  const result = scaleUpAllCharList(
-    charList,
-    displayRatio,
-    {
-      maxLine,
-      maxChar
-    },
-    { schemaCharLen, schemaCharBitLen }
-  );
-  console.log({ result });
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),
     75

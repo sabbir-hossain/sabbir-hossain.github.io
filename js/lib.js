@@ -113,3 +113,54 @@ function getColorData(charList) {
     return total;
   }, {});
 }
+
+/*
+
+function convertStringTo2DArray(inputStr, maxChar) {
+  const inputcharList = inputStr.split("");
+  const inputTextArr = [];
+  let st = 0;
+  let counter = 0;
+  let isRunning = true;
+
+  while (isRunning) {
+    inputTextArr[counter] = [];
+    let newLineFound = false;
+    const len = st + maxChar;
+    let j = st;
+    for (; j < len; j++) {
+      if (
+        typeof inputcharList[j] === "undefined" ||
+        inputcharList[j] === undefined
+      ) {
+        inputTextArr[counter].push(" ");
+      } else if (inputcharList[j] !== "\n") {
+        inputTextArr[counter].push(inputcharList[j]);
+      } else {
+        newLineFound = true;
+        break;
+      }
+    }
+
+    if (newLineFound) {
+      for (let k = j; k < len; k++) {
+        inputTextArr[counter].push(" ");
+      }
+      counter++;
+      inputTextArr[counter] = Array(maxChar).fill(" ");
+      st = j + 2;
+      counter++;
+    } else {
+      st += maxChar;
+      counter++;
+    }
+
+    if (typeof inputcharList[j] === "undefined") {
+      isRunning = false;
+    }
+  }
+
+  return inputTextArr;
+}
+
+*/
