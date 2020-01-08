@@ -1,6 +1,6 @@
 function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const colorData = getColorData(charList);
-  const { schemaCharBitLen, schemaCharLen } = getSchemaData(charList);
+  const { schemaCharLen } = getSchemaData(charList);
 
   let result = scaleUpAllCharList(charList, displayRatio, schemaCharLen);
 
@@ -20,7 +20,8 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
     width = Math.round((prevMaxChar * width) / maxChar) - 1;
     shouldUpdate = true;
   }
-  let height = width;
+
+  let height = Math.round(width * 0.65);
 
   const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
   result = scaleUpCharAgain(result, inputTextArr, maxChar);

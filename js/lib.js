@@ -17,16 +17,7 @@ const colorList = [
 ];
 
 // expand with color, background etc.
-function drawTextBG(
-  ctx,
-  txt,
-  x,
-  y,
-  color,
-  width,
-  height,
-  textColor = "#f9f9f9"
-) {
+function drawTextBG(ctx, txt, x, y, color, width, height, textColor = "#fff") {
   /// lets save current state as we make a lot of changes
   ctx.save();
 
