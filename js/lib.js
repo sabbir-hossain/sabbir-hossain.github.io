@@ -32,7 +32,9 @@ function drawTextBG(
   ctx.save();
 
   /// set font
-  ctx.font = `${fontStyle} ${height}px "Times New Roman", Times, serif`;
+  ctx.font = `${fontStyle} ${
+    fontStyle === "bold" ? height + 2 : height
+  }px "Times New Roman", Times, serif`;
 
   /// draw text from top - makes life easier at the moment
   ctx.textBaseline = "top";
