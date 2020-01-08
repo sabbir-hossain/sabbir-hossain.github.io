@@ -45,6 +45,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
       let startX = x;
       for (let j = 0, len2 = inputTextArr[i].length; j < len2; j++) {
         let color = "#333";
+        let textColor = "#f9f9f9";
 
         if (
           typeof result[i] !== "undefined" &&
@@ -55,7 +56,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
 
         const input = inputTextArr.random();
         const val = input.random();
-        drawTextBG(ctx, val, startX, startY, color, width, height);
+        drawTextBG(ctx, val, startX, startY, color, width, height, textColor);
         startX += width;
       }
       startY += height;

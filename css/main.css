@@ -1,5 +1,6 @@
 .columns {
-  background-color: #C5DDEB;
+  /* background-color: #C5DDEB; */
+  background-color: #efefef;
   min-height: 675px;
 }
 
@@ -36,12 +37,13 @@
 }
 
 #myCanvas {
-  background-color: #C5DDEB;
+  background-color: #efefef;
+  /* background-color: #C5DDEB; */
+  /* #efefef */
 }
 
 canvas {
   padding: 0;
   margin: auto;
   display: block;
-  border: 1px solid #333;
 }

@@ -1,8 +1,7 @@
 const data = [
   {
     text: `
-  Who am I?\n
-    Hi, I am sabbir. A very ordinary backend developer, average programmer, bad frontend developer, world most horrible UX/UI designer that I ever seen.\n My experties includes sleep like Kumbhakarna, can sit tight in chair for hours for no reason. I have good knowledge about movies, mythology, history etc.
+  Who am I?\n  Hi, I am sabbir. A very ordinary backend developer, average programmer, bad frontend developer, world most horrible UX/UI designer that I ever seen.\n  My experties includes sleep like Kumbhakarna, can sit tight in chair for hours for no reason. I have good knowledge about movies, mythology, history etc.
   `,
     shadowText: ["J", "S"],
     // shadowText: ["J", "A", "V", "A", "S", "C", "R", "I", "T"],
