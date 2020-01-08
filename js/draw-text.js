@@ -28,7 +28,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
 
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),
-    75
+    85
   );
 
   setTimeout(function() {
@@ -52,11 +52,13 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
           typeof colorData[result[i][j]] !== "undefined"
         ) {
           color = colorData[result[i][j]];
+          textColor = "#333";
         }
 
         const input = inputTextArr.random();
         const val = input.random();
         drawTextBG(ctx, val, startX, startY, color, width, height, textColor);
+        // drawTextBG(ctx, txt, x, y, color, width, height, textColor)
         startX += width;
       }
       startY += height;
@@ -82,14 +84,26 @@ function drawFixedText(
     let startX = x;
     for (let j = 0, len2 = inputTextArr[i].length; j < len2; j++) {
       let color = "#333";
+      let textColor = "#f9f9f9";
+
       if (
         typeof result[i] !== "undefined" &&
         typeof colorData[result[i][j]] !== "undefined"
       ) {
         color = colorData[result[i][j]];
+        textColor = "#333";
       }
 
-      drawTextBG(ctx, inputTextArr[i][j], startX, startY, color, width, height);
+      drawTextBG(
+        ctx,
+        inputTextArr[i][j],
+        startX,
+        startY,
+        color,
+        width,
+        height,
+        textColor
+      );
       startX += width;
     }
     startY += height;

@@ -17,16 +17,8 @@ const colorList = [
 ];
 
 // expand with color, background etc.
-function drawTextBG(
-  ctx,
-  txt,
-  x,
-  y,
-  color,
-  width,
-  height,
-  textColor = "#f9f9f9"
-) {
+function drawTextBG(ctx, txt, x, y, color, width, height, textColor) {
+  console.log({ color, textColor });
   /// lets save current state as we make a lot of changes
   ctx.save();
 
@@ -41,10 +33,10 @@ function drawTextBG(
   ctx.fillStyle = color;
 
   // get width of text
-  var wd = ctx.measureText(txt).width;
+  // var wd = ctx.measureText(txt).width;
 
   // draw background rect assuming height of font
-  ctx.fillRect(x, y, width, parseInt(height, 10));
+  ctx.fillRect(x, y, width, height);
   // drawBorder(ctx, x, y, minWidth, parseInt(font, 10), color, (thickness = 1));
 
   /// text color
@@ -119,9 +111,11 @@ function convertStringTo2DArray(inputStr, maxChar, result) {
 
 function getColorData(charList) {
   return charList.reduce((total, current) => {
-    total[`${charSchemaProsObj[current]}_1`] = colorList.random();
+    total[`${charSchemaProsObj[current]}_1`] = "#d7d8d6";
+    // total[`${charSchemaProsObj[current]}_1`] = colorList.random();
 
-    total[`${charSchemaProsObj[current]}_2`] = colorList.random();
+    total[`${charSchemaProsObj[current]}_2`] = "#a7a8a6";
+    // total[`${charSchemaProsObj[current]}_2`] = colorList.random();
     return total;
   }, {});
 }
