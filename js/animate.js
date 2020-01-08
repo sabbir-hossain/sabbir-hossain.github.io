@@ -12,12 +12,22 @@ document.getElementById("backwareDiv").addEventListener("click", evt => {
   if (currentPage >= 0 && currentPage < data.length) {
     draw_animation(currentPage);
   }
+
+  if (currentPage < 0) {
+    currentPage = data.length - 1;
+    draw_animation(currentPage);
+  }
 });
 
 document.getElementById("forwardDiv").addEventListener("click", evt => {
   evt.preventDefault();
   currentPage++;
   if (currentPage >= 0 && currentPage < data.length) {
+    draw_animation(currentPage);
+  }
+
+  if (currentPage >= data.length) {
+    currentPage = 0;
     draw_animation(currentPage);
   }
 });
