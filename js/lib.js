@@ -17,13 +17,22 @@ const colorList = [
 ];
 
 // expand with color, background etc.
-function drawTextBG(ctx, txt, x, y, color, width, height, textColor) {
-  console.log({ color, textColor });
+function drawTextBG(
+  ctx,
+  txt,
+  x,
+  y,
+  color,
+  width,
+  height,
+  textColor,
+  fontStyle
+) {
   /// lets save current state as we make a lot of changes
   ctx.save();
 
   /// set font
-  ctx.font = `${height}px Calibri`;
+  ctx.font = `${fontStyle} ${height}px "Times New Roman", Times, serif`;
 
   /// draw text from top - makes life easier at the moment
   ctx.textBaseline = "top";
@@ -37,16 +46,12 @@ function drawTextBG(ctx, txt, x, y, color, width, height, textColor) {
 
   // draw background rect assuming height of font
   ctx.fillRect(x, y, width, height);
-  // drawBorder(ctx, x, y, minWidth, parseInt(font, 10), color, (thickness = 1));
 
   /// text color
-  // ctx.fillStyle = color;
-  // ctx.fillStyle = "#000";
   ctx.fillStyle = textColor;
 
   /// draw text on top
   ctx.fillText(txt === "M" || txt === "m" ? txt : ` ${txt} `, x, y);
-  // ctx.strokeText(txt, x, y);
 
   /// restore original state
   ctx.restore();
@@ -111,10 +116,10 @@ function convertStringTo2DArray(inputStr, maxChar, result) {
 
 function getColorData(charList) {
   return charList.reduce((total, current) => {
-    total[`${charSchemaProsObj[current]}_1`] = "#d7d8d6";
+    total[`${charSchemaProsObj[current]}_1`] = "#c7b8b6";
     // total[`${charSchemaProsObj[current]}_1`] = colorList.random();
 
-    total[`${charSchemaProsObj[current]}_2`] = "#a7a8a6";
+    total[`${charSchemaProsObj[current]}_2`] = "#979896";
     // total[`${charSchemaProsObj[current]}_2`] = colorList.random();
     return total;
   }, {});

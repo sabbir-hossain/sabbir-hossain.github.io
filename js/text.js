@@ -34,7 +34,7 @@ const data = [
   Wanted to be Herostratus, but I am not that bad\n
   Wanted to be Ashutosh, but I am not that fortunate\n
   Wanted to be Dante Alighieri, write Devine commedy. I really wish I could\n 
-    \n
+
   So what am I now?\n
   I am Don Quixote of La Mancha
     `,
