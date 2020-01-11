@@ -160,6 +160,15 @@ const charSchemaList = {
     [0, 0, 0, 28],
     [0, 0, 0, 28],
     [0, 0, 0, 28]
+  ],
+  empty: [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
   ]
 };
 
@@ -181,7 +190,8 @@ const charSchemaProsObj = {
   V: 22,
   Y: 25,
   _dot: 27,
-  4: 28
+  4: 28,
+  empty: 29
 };
 
 function getSchemaData(charList) {

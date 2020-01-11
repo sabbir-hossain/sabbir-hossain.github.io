@@ -1,8 +1,18 @@
 const data = [
   {
-    text: `Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django and C# .Net\n I also love to read books, watching movies. I have good knowledge about mythology, history etc.
+    text: `\n
+Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django and C# .Net\n I also love to read books, watching movies. I have good knowledge about mythology, history etc.
   `,
-    shadowText: ["J", "S"],
+    shadowText: [
+      "empty",
+      "empty",
+      "empty",
+      "J",
+      "S",
+      "empty",
+      "empty",
+      "empty"
+    ],
     // shadowText: ["J", "A", "V", "A", "S", "C", "R", "I", "T"],
     displayRatio: 0.9
   },
@@ -13,43 +23,70 @@ const data = [
   My Day-dream\n -----------------------\n
   My day dream, one day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home and take a sound sleep.\n And I also know it will never happen.
     `,
-    shadowText: ["N", "O", "D", "E", "_dot", "J", "S"],
+    shadowText: [
+      "empty",
+      "empty",
+      "N",
+      "O",
+      "D",
+      "E",
+      "_dot",
+      "J",
+      "S",
+      "empty"
+    ],
     displayRatio: 0.9
   },
   {
     text: `
  Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
- Do you know where is Bangladesh? Well If you ever buy map of India, you will get free Bangladeshi map.\n
- Do not think we are cheep. We are very brave. Bangladesh is the only second country in world after USA, who have earned their indipendence through liberation war in mordern history.
+ Do you know where is Bangladesh? Well If you ever buy map of India, you will get a  free Bangladeshi map.\n
+ Do not think we are cheep. We are very brave. Bangladesh is one of two countries in world after USA, who have earned their indipendence through liberation war in mordern history.
     `,
-    shadowText: ["M", "O", "N", "G", "O", "D", "B"],
+    shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
     displayRatio: 0.8
   },
   {
     text: `
   I wanted to be HERCULES, but I'm not that strong\n
- Wanted to be Alexander-the-Great, but don't want to die that ealier\n
- Wanted to be Herostratus, but I am not that bad\n
+ Wanted to be ALEXANDER-THE-GREAT, but don't want to die that ealier\n
+ Wanted to be DIONYSUS, But I am not that good\n
+ Wanted to be HEROSTRATUS, but I am not that bad\n
+ Wanted to be NIKOLA TESLA, But it is beyond my limit\n
  Wanted to be Ashutosh, but I am not that fortunate\n
- Wanted to be Dante Alighieri, write Devine commedy. I really wish I could\n 
+ Wanted to be DANTE ALIGHIERI, wanted to write Devine commedy. I really wish I could\n 
 
  So what am I now?\n
- I am Don Quixote of La Mancha
+ I am DON QUIXOTE of LA MANCHA
     `,
-    shadowText: ["D", "Y", "N", "A", "M", "O", "D", "B"],
+    shadowText: [
+      "empty",
+      "empty",
+      "empty",
+      "N",
+      "E",
+      "O",
+      "4",
+      "J",
+      "empty",
+      "empty",
+      "empty"
+    ],
     displayRatio: 0.8
   },
   {
     text: `
-  Reading\n
+  Reading\n -----------------------\n
  My favorite write is "Maupassant", "Mirza Ghalib".\n
  My most favorite book is "Don Quixote" by Cervantes.\n
+ The book I read most but never finished, is English-to-Bengali Dictionary\n
   \n
- Social Life\n
+ Social Life\n -----------------------\n
  I don't post on social media regularly, But I do git commit at almost every day
     `,
-    shadowText: ["N", "E", "O", "4", "J"],
+
+    shadowText: ["empty", "D", "Y", "N", "A", "M", "O", "D", "B", "empty"],
     displayRatio: 0.8
   }
 ];

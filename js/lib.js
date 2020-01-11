@@ -120,10 +120,10 @@ function convertStringTo2DArray(inputStr, maxChar, result) {
 
 function getColorData(charList) {
   return charList.reduce((total, current) => {
-    total[`${charSchemaProsObj[current]}_1`] = "#c7b8b6";
+    total[`${charSchemaProsObj[current]}_1`] = "#878886";
     // total[`${charSchemaProsObj[current]}_1`] = colorList.random();
 
-    total[`${charSchemaProsObj[current]}_2`] = "#979896";
+    total[`${charSchemaProsObj[current]}_2`] = "#575856";
     // total[`${charSchemaProsObj[current]}_2`] = colorList.random();
     return total;
   }, {});

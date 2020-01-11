@@ -103,7 +103,7 @@ function drawFixedText(
         typeof colorData[result[i][j]] !== "undefined"
       ) {
         color = colorData[result[i][j]];
-        textColor = "#333";
+        // textColor = "#333";
         fontStyle = "bold";
       }
 
