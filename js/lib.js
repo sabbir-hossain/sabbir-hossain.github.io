@@ -31,9 +31,11 @@ function drawTextBG(
   /// lets save current state as we make a lot of changes
   ctx.save();
 
+  // const fontSize = Math.round(height * 0.5);
+  const fontSize = height;
   /// set font
   ctx.font = `${fontStyle} ${
-    fontStyle === "bold" ? height + 2 : height
+    fontStyle === "bold" ? fontSize + 2 : fontSize
   }px "Times New Roman", Times, serif`;
 
   /// draw text from top - makes life easier at the moment

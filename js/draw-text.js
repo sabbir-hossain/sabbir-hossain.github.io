@@ -10,7 +10,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
 
   const total = (cW - x * 2) * (cH - y * 2);
   const val = total / totalChar;
-  let width = Math.round(Math.sqrt(val) * 0.8);
+  let width = Math.round(Math.sqrt(val) * 0.75);
 
   let maxChar = Math.round(cW / width);
 
@@ -21,7 +21,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
     shouldUpdate = true;
   }
 
-  let height = Math.round(width * 0.65);
+  let height = Math.round(width * 1.1);
 
   const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
   result = scaleUpCharAgain(result, inputTextArr, maxChar);

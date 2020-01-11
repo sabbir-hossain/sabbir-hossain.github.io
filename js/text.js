@@ -1,7 +1,6 @@
 const data = [
   {
-    text: `
-  Who am I?\n -----------------------\n  Hi, I am sabbir. A very ordinary backend developer, average programmer, bad frontend developer, world most horrible UX/UI designer that I ever seen.\n  My experties includes sleep like Kumbhakarna, can sit tight in chair for hours for no reason. I have good knowledge about movies, mythology, history etc.
+    text: `Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django and C# .Net\n I also love to read books, watching movies. I have good knowledge about mythology, history etc.
   `,
     shadowText: ["J", "S"],
     // shadowText: ["J", "A", "V", "A", "S", "C", "R", "I", "T"],
@@ -12,7 +11,7 @@ const data = [
   My Nightmare\n -----------------------\n
   As a software engineer, My worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer?"\n 
   My Day-dream\n -----------------------\n
-  My day dream, one day I arrived at office on time, write code all day without test, run code successfully on production environment with no bug and go back to home and take a sound sleep.\n And I also know it will never happen.
+  My day dream, one day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home and take a sound sleep.\n And I also know it will never happen.
     `,
     shadowText: ["N", "O", "D", "E", "_dot", "J", "S"],
     displayRatio: 0.9
@@ -44,13 +43,10 @@ const data = [
   {
     text: `
   Reading\n
- I spend a lot of time to read subtitle of foriegn movies'.\n
- My most favorite romantic novel is "Don Quixote" by Cervantes.\n
+ My favorite write is "Maupassant", "Mirza Ghalib".\n
+ My most favorite book is "Don Quixote" by Cervantes.\n
   \n
- Favorite Product\n
- I like apple product very much. I specially like apple, apple juice etc.\n
-  \n
- Social Profile\n
+ Social Life\n
  I don't post on social media regularly, But I do git commit at almost every day
     `,
     shadowText: ["N", "E", "O", "4", "J"],

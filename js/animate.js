@@ -41,7 +41,8 @@ function draw_animation(currentPage) {
   const canvasWidth = window.innerWidth * 0.75;
 
   canvas.width = canvasWidth;
-  canvas.height = window.innerHeight - 100;
+  canvas.height = canvasWidth;
+  // canvas.height = window.innerHeight - 100;
 
   // get a reference to the drawing context
   const bgCanvas = document.createElement("canvas");

@@ -25,6 +25,7 @@
 
 .column {
   float: left;
+  background-color: #efefef;
 }
 
 .left, .right {
