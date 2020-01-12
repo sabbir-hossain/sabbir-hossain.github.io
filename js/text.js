@@ -52,7 +52,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
   {
     text: `
   I wanted to be HERCULES, but I'm not that strong\n
- Wanted to be ALEXANDER-THE-GREAT, but don't want to die that ealier\n
+ Wanted to be ALEXANDER-THE-GREAT, but I am not the chosen one\n
  Wanted to be DIONYSUS, But I am not that good\n
  Wanted to be HEROSTRATUS, but I am not that bad\n
  Wanted to be DANTE ALIGHIERI, wanted to write Devine commedy. I really wish I could\n 
