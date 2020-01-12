@@ -80,7 +80,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
   {
     text: `
   Reading\n -----------------------\n
- My favorite write is "Maupassant", "Mirza Ghalib".\n
+ My favorite writers are "Maupassant", "Mirza Ghalib".\n
  My most favorite book is "Don Quixote" by Cervantes.\n
  The book I read most but never finished, is English-to-Bengali Dictionary\n
   \n
