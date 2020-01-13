@@ -60,7 +60,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
  Wanted to be Ashutosh, but I am not that fortunate\n
 
   So what am I now?\n
- I am DON QUIXOTE of LA MANCHA
+ I am DON QUIXOTE of LA MANCHA. I have ROCINANTE, DULCINEA-DEL-TOBOSO, but can't afford SANCHO PANZA
     `,
     shadowText: [
       "empty",
