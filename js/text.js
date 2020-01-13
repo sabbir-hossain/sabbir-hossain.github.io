@@ -43,7 +43,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
     text: `
  Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
- Do you know where is Bangladesh? Well If you ever buy map of India, you will get a  free Bangladeshi map.\n
+ Do you know where is Bangladesh? Well If you ever buy a map of India, you will get a  free Bangladesh's map.\n
  Do not think we are cheep. We are very brave. Bangladesh is one of two countries in world after USA, who have earned their indipendence through liberation war in mordern history.
     `,
     shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
@@ -56,10 +56,10 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
  Wanted to be DIONYSUS, But I am not that good\n
  Wanted to be HEROSTRATUS, but I am not that bad\n
  Wanted to be LEONARDO DA VINCI, wanted to draw MONA LISA. I really wish I could\n 
- Wanted to be NIKOLA TESLA, But it is beyond my limit\n
+  Wanted to be NIKOLA TESLA, But it is beyond my limit\n
  Wanted to be Ashutosh, but I am not that fortunate\n
 
- So what am I now?\n
+  So what am I now?\n
  I am DON QUIXOTE of LA MANCHA
     `,
     shadowText: [
