@@ -51,7 +51,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
   },
   {
     text: `
- My Story\n -----------------------\n
+  My Story\n -----------------------\n
   I wanted to be HERCULES, but I'm not that strong\n
  Wanted to be ALEXANDER-THE-GREAT, but I am not the chosen one\n
  Wanted to be DIONYSUS, But I am not that good\n
