@@ -80,6 +80,30 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
   },
   {
     text: `
+  My Aim in LIFE\n -----------------------\n
+  One Day, God KRISHNA was returning to his kingdom. All of the villagers enlighten their homes and roads so that their GOD's "Ratha Yatra" would looked wonderful.\n
+  But some villagers made their homes and roads completely into darkness.\n
+  Then KRISHNA asked them why did they do that?\n
+  They said that dear GOD your "Ratha Yatra" is already in enlighten, so we found out that if we would be into darkness, your "Ratha Yatra" will looked much more wonderful.\n
+  I wish I would be like God KRISHNA who would have some followers who would do anything to enlighten my life or I would be like that villagers who would be into darkness to enlighten others life.
+    `,
+    shadowText: [
+      "empty",
+      "empty",
+      "empty",
+      "empty",
+      "A",
+      "W",
+      "S",
+      "empty",
+      "empty",
+      "empty",
+      "empty"
+    ],
+    displayRatio: 0.65
+  },
+  {
+    text: `
   Reading\n -----------------------\n
  My favorite writers are "Maupassant", "Mirza Ghalib".\n
  My most favorite book is "Don Quixote" by Miguel de Cervantes.\n
