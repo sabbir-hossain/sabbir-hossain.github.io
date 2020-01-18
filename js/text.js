@@ -1,7 +1,7 @@
 const data = [
   {
     text: `\n
-Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django, C, C++ and C# .Net\n  I have good knowledge about TDD, modern Microservice  and REST API-Centric Architecture. I can adapt new technologies quickly.
+Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django, C, C++ and C# .Net\n  I have good knowledge about TDD, modern Microservice  and REST API-Centric Architecture. I can adapt new technologies quickly.
   `,
     shadowText: [
       "empty",
