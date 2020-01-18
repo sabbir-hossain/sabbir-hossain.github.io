@@ -1,7 +1,7 @@
 const data = [
   {
     text: `\n
-Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django and C# .Net\n I also love to read books, watching movies. I have good knowledge about mythology, history etc.
+Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django, C, C++ and C# .Net\n  I have good knowledge about TDD, modern Microservice  and REST API-Centric Architecture. I can adapt new technologies quickly.
   `,
     shadowText: [
       "empty",
@@ -104,11 +104,12 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a full stack develo
   },
   {
     text: `
-  Reading\n -----------------------\n
- My favorite writers are "Maupassant", "Mirza Ghalib".\n
+  Hobbies\n -----------------------\n
+ I love to read books, watching movies. I have good knowledge about mythology, history etc.
+  My favorite writers are "Maupassant", "Mirza Ghalib".\n
  My most favorite book is "Don Quixote" by Miguel de Cervantes.\n
  The book I read most but never finished, is English-to-Bengali Dictionary\n
- And the books that made me cry is my check-books\n
+ And the books that make me cry is my check-books\n
   \n
  Social Life\n -----------------------\n
  I don't post on social media regularly, But I do git commit at almost every day
