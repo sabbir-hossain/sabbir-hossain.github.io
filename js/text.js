@@ -21,7 +21,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   {
     text: `
   My Nightmare\n -----------------------\n
-  As a software engineer, My worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer?"\n 
+  As a software engineer, the thing that I feared most is "500: Internal Server Error". But my worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer?"\n 
   My Day-dream\n -----------------------\n
   My day dream, one day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home and take a sound sleep.\n And I also know it will never happen.
     `,
