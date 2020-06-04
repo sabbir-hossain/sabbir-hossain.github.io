@@ -1,7 +1,7 @@
 const data = [
   {
     text: `\n
-Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, AngularJS, Python, Django, C, C++ and C# .Net\n  I have good knowledge about TDD, modern Microservice  and REST API-Centric Architecture. I can adapt new technologies quickly.
+Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, Firebase, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, Python, Django, C, C++ and C# .Net\n  I have good knowledge about TDD, modern Microservice  and REST API-Centric Architecture. I can adapt new technologies quickly.
   `,
     shadowText: [
       "empty",
@@ -22,8 +22,8 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
     text: `
  Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
- Do you know where is Bangladesh? Well If you ever buy a map of India, you will get a free Bangladesh's map.\n
- Do not think we are cheep. We are very brave. Bangladesh is one of two countries in world after USA, who have earned their indipendence through winning the liberation war in mordern history.\n
+ Do you know where is Bangladesh? Well If you ever buy a map of India, you will get a  free Bangladesh's map.\n
+ Do not think we are cheep. We are very brave. Bangladesh is one of two countries in world after USA, who have earned her indipendence through winning the liberation war in mordern history.\n
  Here are some small details about my country. My country is very excessively green. We have 12 Gregorian calendar months (as you known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
     `,
     shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
