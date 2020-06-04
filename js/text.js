@@ -35,9 +35,9 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   I wanted to be HERCULES, but I'm not that strong\n
  Wanted to be ALEXANDER-THE-GREAT, but I am not the chosen one\n
  Wanted to be DIONYSUS, But I am not that good\n
- Wanted to be HEROSTRATUS, but I am not that bad\n
- Wanted to be LEONARDO DA VINCI, wanted to draw MONA LISA. I really wish I could\n 
-  Wanted to be NIKOLA TESLA, But it is beyond my limit\n
+ Wanted to be HEROSTRATUS, but I am not that bad
+  Wanted to be LEONARDO DA VINCI, wanted to draw MONA LISA. I really wish I could
+  Wanted to be NIKOLA TESLA, But it is beyond my limit
  Wanted to be Ashutosh, but I am not that fortunate\n
 
   So what am I now?\n
@@ -85,9 +85,9 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   {
     text: `
   My Nightmare\n -----------------------\n
-  As a software engineer, the thing that I feared most is "500: Internal Server Error". But my worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer?"\n 
+  As a software engineer, the thing that I feared most is "500: Internal Server Error". But my worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer? Although I'm working on it."\n 
   My Day-dream\n -----------------------\n
-  My day dream, one day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home and take a sound sleep.\n And I also know it will never happen.
+  One day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home on time and take a sound sleep.\n And I also know it will never happen.
     `,
     shadowText: [
       "empty",
