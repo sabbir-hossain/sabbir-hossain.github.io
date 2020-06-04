@@ -20,31 +20,11 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   },
   {
     text: `
-  My Nightmare\n -----------------------\n
-  As a software engineer, the thing that I feared most is "500: Internal Server Error". But my worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer?"\n 
-  My Day-dream\n -----------------------\n
-  My day dream, one day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home and take a sound sleep.\n And I also know it will never happen.
-    `,
-    shadowText: [
-      "empty",
-      "empty",
-      "N",
-      "O",
-      "D",
-      "E",
-      "_dot",
-      "J",
-      "S",
-      "empty"
-    ],
-    displayRatio: 0.9
-  },
-  {
-    text: `
  Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
  Do you know where is Bangladesh? Well If you ever buy a map of India, you will get a  free Bangladesh's map.\n
- Do not think we are cheep. We are very brave. Bangladesh is one of two countries in world after USA, who have earned their indipendence through liberation war in mordern history.
+ Do not think we are cheep. We are very brave. Bangladesh is one of two countries in world after USA, who have earned their indipendence through liberation war in mordern history.\n
+ Here are some small details about my country. My country is very excessively green. We have 12 Gregorian calendar months (as you known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
     `,
     shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
     displayRatio: 0.8
@@ -101,6 +81,27 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
       "empty"
     ],
     displayRatio: 0.65
+  },
+  {
+    text: `
+  My Nightmare\n -----------------------\n
+  As a software engineer, the thing that I feared most is "500: Internal Server Error". But my worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer?"\n 
+  My Day-dream\n -----------------------\n
+  My day dream, one day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home and take a sound sleep.\n And I also know it will never happen.
+    `,
+    shadowText: [
+      "empty",
+      "empty",
+      "N",
+      "O",
+      "D",
+      "E",
+      "_dot",
+      "J",
+      "S",
+      "empty"
+    ],
+    displayRatio: 0.9
   },
   {
     text: `
