@@ -65,7 +65,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   But some villagers made their homes and roads completely into darkness.\n
   Then KRISHNA asked them why did they do that?\n
   They said that dear GOD your "Ratha Yatra" is already in enlighten, so we found out that if we would be into darkness, your "Ratha Yatra" will looked much more wonderful.\n
-  I wish I would be like God KRISHNA who would have some followers who would do anything to enlighten my life or I would be like that villagers who would be into darkness to enlighten others life.
+  I wish I would be like that villagers who would be into darkness to enlighten others life.
     `,
     shadowText: [
       "empty",
