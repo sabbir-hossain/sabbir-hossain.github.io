@@ -1,7 +1,7 @@
 const data = [
   {
     text: `\n
-Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, Firebase, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, Python, Django, C, C++ and C# .Net\n  I have good knowledge about TDD, modern Microservice  and REST API-Centric Architecture. I can adapt new technologies quickly.
+Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, Firebase, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, Python, Django, C, C++ and .Net\n  I have strong knowledge of TDD, modern Microservice and REST API-Centric Architecture. I can swiftly adjust to new technologies.
   `,
     shadowText: [
       "empty",
@@ -22,9 +22,9 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
     text: `
  Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
- Do you know where is Bangladesh? Well If you ever buy a map of India, you will get a  free Bangladesh's map.\n
- Do not think we are cheep. We are very brave. Bangladesh is one of two countries in world after USA, who have earned her indipendence through winning the liberation war in mordern history.\n
- Here are some small details about my country. My country is very excessively green. We have 12 Gregorian calendar months (as you known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
+ Do you know where Bangladesh is? Well, you will receive a free map of Bangladesh if you ever buy a map of India.\n
+ Do not think we are cheep. We are quite brave. Bangladesh is one of two nations after the USA in the world that won the liberation war in modern history and has gained its independence.\n
+ Some information about my country is given here. My country is very excessively green. We have 12 Gregorian calendar months (as you have known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
     `,
     shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
     displayRatio: 0.8
@@ -33,14 +33,14 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
     text: `
   My Story\n -----------------------\n
   I wanted to be HERCULES, but I'm not that strong\n
- Wanted to be ALEXANDER-THE-GREAT, but I am not the chosen one\n
- Wanted to be DIONYSUS, But I am not that good\n
+ Wanted to be ALEXANDER-THE-GREAT, but I am not the one selected\n
+ Wanted to be DIONYSUS, But I am not that good at that\n
  Wanted to be HEROSTRATUS, but I am not that bad
   Wanted to be LEONARDO DA VINCI, wanted to draw MONA LISA. I really wish I could
-  Wanted to be NIKOLA TESLA, But it is beyond my limit
- Wanted to be Ashutosh, but I am not that fortunate\n
+  Wanted to be NIKOLA TESLA, But it is beyond my limits
+ Wanted to be Ashutosh, but I am not that lucky\n
 
-  So what am I now?\n
+  So what am I?\n
  I am DON QUIXOTE of LA MANCHA. I can't afford SANCHO PANZA, But I have ROCINANTE and DULCINEA-DEL-TOBOSO.
     `,
     shadowText: [
@@ -63,9 +63,9 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   My Aim in LIFE\n -----------------------\n
   One Day, God KRISHNA was returning to his kingdom. All of the villagers enlighten their homes and roads so that their GOD's "Ratha Yatra" would looked wonderful.\n
   But some villagers made their homes and roads completely into darkness.\n
-  Then KRISHNA asked them why did they do that?\n
+  Then LORD KRISHNA asked them why did they do that?\n
   They said that dear GOD your "Ratha Yatra" is already in enlighten, so we found out that if we would be into darkness, your "Ratha Yatra" will looked much more wonderful.\n
-  I wish I would be like that villagers who would be into darkness to enlighten others life.
+  I wish I would be like those villagers who would be into darkness to enlighten others' life.
     `,
     shadowText: [
       "empty",
@@ -85,9 +85,9 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   {
     text: `
   My Nightmare\n -----------------------\n
-  As a software engineer, the thing that I feared most is "500: Internal Server Error". But my worst nightmare is that, one day someone told me, "So you are software engineer, can you fix my smartphone/computer? Although I'm working on it."\n 
+  As a software engineer, the thing that I afraid most is "500: Internal Server Error". But my worst nightmare is that, one day someone tell me, "So you are software engineer, can you fix my smartphone or computer? I'm working on it, though."\n 
   My Day-dream\n -----------------------\n
-  One day I arrived at office on time, write code all day without any testing, run code successfully on production environment with no bug and go back to home on time and take a sound sleep.\n And I also know it will never happen.
+  One day I will arrive at office on time, write code all day without any testing, run code successfully on production environment without a bug and go back to home on time as well as take a sound sleep.\n And I also know this is never going to happen.
     `,
     shadowText: [
       "empty",
@@ -106,14 +106,14 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Back-end develope
   {
     text: `
   Hobbies\n -----------------------\n
- I love to read books, watching movies. I have good knowledge about mythology, history etc.
+ I love reading books. I have good understanding of mythology, history etc.
   My favorite writers are "Maupassant", "Mirza Ghalib".\n
  My most favorite book is "Don Quixote" by Miguel de Cervantes.\n
  The book I read most but never finished, is English-to-Bengali Dictionary\n
  And the books that make me cry is my check-books\n
   \n
  Social Life\n -----------------------\n
- I don't post on social media regularly, But I do git commit at almost every day
+ I don't post on social media regularly, but almost every day, I do git commit
     `,
 
     shadowText: ["empty", "D", "Y", "N", "A", "M", "O", "D", "B", "empty"],
