@@ -36,7 +36,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
  Wanted to be ALEXANDER-THE-GREAT, but I am not the one selected\n
  Wanted to be DIONYSUS, But I am not that good at that\n
  Wanted to be HEROSTRATUS, but I am not that bad
-  Wanted to be LEONARDO DA VINCI, wanted to draw MONA LISA. I really wish I could
+  Wanted to be LEONARDO DA VINCI, wanted to build MONA LISA. I really wish I could
   Wanted to be NIKOLA TESLA, But it is beyond my limits
  Wanted to be Ashutosh, but I am not that lucky\n
 
