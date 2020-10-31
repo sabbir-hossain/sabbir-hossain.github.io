@@ -24,7 +24,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
  I am from Dhaka, Bangladesh.\n
  Do you know where Bangladesh is? Well, you will receive a free map of Bangladesh if you ever buy a map of India.\n
  Do not think we are cheep. We are quite brave. Bangladesh is one of two nations after the USA in the world that won the liberation war in modern history and has gained its independence.\n
- Some information about my country is given here. My country is very excessively green. We have 12 Gregorian calendar months (as you have known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
+ Some information about my country is given here. Bangladesh is a densely populated excessively green country. We have 12 Gregorian calendar months (as you have known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
     `,
     shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
     displayRatio: 0.8
