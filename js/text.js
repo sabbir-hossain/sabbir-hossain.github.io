@@ -41,7 +41,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
  Wanted to be Ashutosh, but I am not that lucky\n
 
   So what am I?\n
- I am DON QUIXOTE of LA MANCHA. I can't afford SANCHO PANZA, But I have ROCINANTE and DULCINEA-DEL-TOBOSO.
+ I am DON QUIXOTE of LA MANCHA.
     `,
     shadowText: [
       "empty",
