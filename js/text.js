@@ -41,7 +41,9 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
  Wanted to be Ashutosh, but I am not that lucky\n
 
   So what am I?\n
- I am DON QUIXOTE of LA MANCHA.
+ I am DON QUIXOTE of LA MANCHA.\n
+ What will I do?
+ I will be like Lao Tzu
     `,
     shadowText: [
       "empty",
@@ -65,7 +67,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
   But some villagers made their homes and roads completely into darkness.\n
   Then LORD KRISHNA asked them why did they do that?\n
   They said that dear GOD your "Ratha Yatra" is already in enlighten, so we found out that if we would be into darkness, your "Ratha Yatra" will looked much more wonderful.\n
-  I wish I would be like those villagers who would be into darkness to enlighten others' life.
+  I wish I would be like those villagers.
     `,
     shadowText: [
       "empty",
