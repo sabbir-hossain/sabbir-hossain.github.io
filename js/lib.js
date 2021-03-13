@@ -32,7 +32,8 @@ function drawTextBG(
   ctx.save();
 
   // const fontSize = Math.round(height * 0.5);
-  const fontSize = height;
+  // const fontSize = height;
+     const fontSize =  Math.round(height * 0.8) ;
   /// set font
   ctx.font = `${fontStyle} ${
     fontStyle === "bold" ? fontSize + 2 : fontSize
