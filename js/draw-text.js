@@ -11,7 +11,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   const total = (cW - x * 2) * (cH - y * 2);
   const val = total / totalChar;
   //let width = Math.round(Math.sqrt(val) * 0.75);
-  let width = Math.round( Math.sqrt(val) * 1.2 );
+  let width = Math.round( Math.sqrt(val) * 1.5 );
 
   let maxChar = Math.round(cW / width);
 
