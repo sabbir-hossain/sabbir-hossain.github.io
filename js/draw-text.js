@@ -23,10 +23,12 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
   }
 
   let height = Math.round(width * 1.1);
-
+  // console.log({inputStr})
   const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
   result = scaleUpCharAgain(result, inputTextArr, maxChar);
-
+  console.log({
+    inputTextArr, result, x, y, width, height
+  })
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),
     85
@@ -60,6 +62,7 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
 
         const input = inputTextArr.random();
         const val = input.random();
+
         drawTextBG(
           ctx,
           val,
@@ -92,7 +95,7 @@ function drawFixedText(
 ) {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   let startY = y;
-
+  const updatedWidth = Math.round( width - (width * 0.15));
   for (let i = 0, len = inputTextArr.length; i < len; i++) {
     let startX = x;
     for (let j = 0, len2 = inputTextArr[i].length; j < len2; j++) {
@@ -108,18 +111,19 @@ function drawFixedText(
         fontStyle = "bold";
       }
 
+      const newWidth = inputTextArr[i][j] === "M" || inputTextArr[i][j] === "m" ? width : updatedWidth;
       drawTextBG(
         ctx,
         inputTextArr[i][j],
         startX,
         startY,
         color,
-        width,
+        newWidth,
         height,
         textColor,
         fontStyle
       );
-      startX += width;
+      startX += newWidth;
     }
     startY += height;
   }
