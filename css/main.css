@@ -1,13 +1,11 @@
-.columns {
-  /* background-color: #C5DDEB; */
-  background-color: #efefef;
-  min-height: 675px;
-}
-
 .menu-img {
   width: 100px;
   height: 300px;
   opacity: 0.6;
+}
+
+.nav-link {
+  margin-top: 200px;
 }
 
 .menu-img:hover {
@@ -15,36 +13,7 @@
   opacity: 1;
 }
 
-.img-left {
-  float: left;
-}
-
-.img-right {
-  float: right;
-}
-
-.column {
-  float: left;
-  background-color: #efefef;
-}
-
-.left, .right {
-  width: 10%;
-  margin-top: 10%;
-}
-
-.middle {
-  width: 80%;
-}
-
-#myCanvas {
-  background-color: #efefef;
-  /* background-color: #C5DDEB; */
-  /* #efefef */
-}
-
 canvas {
-  padding: 0;
-  margin: auto;
-  display: block;
+    background-color: #333;
+    margin-top: 1.5em;
 }

@@ -5,7 +5,7 @@ window.addEventListener("load", function(event) {
   draw_animation(currentPage);
 });
 
-document.getElementById("backwareDiv").addEventListener("click", evt => {
+document.getElementById("backwardDiv").addEventListener("click", evt => {
   evt.preventDefault();
   currentPage--;
 
@@ -38,21 +38,21 @@ function draw_animation(currentPage) {
   const canvas = document.getElementById(canvas_id);
   const ctx = canvas.getContext("2d");
 
-  const canvasWidth = window.innerWidth * 0.75;
+  const clientWidth = document.getElementById('canvas-area').clientWidth;
 
-  canvas.width = canvasWidth;
-  canvas.height = Math.round(canvasWidth * 0.89);
-  // canvas.height = window.innerHeight - 100;
+  canvas.width = clientWidth;
+  canvas.height = Math.round(canvas.width * 0.75);
 
   // get a reference to the drawing context
   const bgCanvas = document.createElement("canvas");
-  const bgContext = bgCanvas.getContext("2d").canvas;
+  // const bgContext = bgCanvas.getContext("2d").canvas;
 
   let startY = 50;
   let startX = 0;
   const { text = "", shadowText = [], displayRatio = 0 } =
     data[currentPage] || {};
-  // displayAnimation(ctx, startX, startY);
+  
+  // displayAnimation(canvas, ctx, startX, startY);
 
-  displayAnimation(ctx, text, shadowText, displayRatio, startX, startY);
+  displayAnimation(canvas, ctx, text, shadowText, displayRatio, startX, startY);
 }
