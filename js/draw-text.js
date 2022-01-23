@@ -1,4 +1,4 @@
-function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
+function displayAnimation(canvas, ctx, inputStr, charList, displayRatio, x, y) {
   const colorData = getColorData(charList);
   const { schemaCharLen } = getSchemaData(charList);
 
@@ -26,6 +26,8 @@ function displayAnimation(ctx, inputStr, charList, displayRatio, x, y) {
 
   const inputTextArr = convertStringTo2DArray(inputStr, maxChar, result);
   result = scaleUpCharAgain(result, inputTextArr, maxChar);
+
+  canvas.height = Math.floor(inputTextArr.length * height) + 50;
 
   const animateInterval = setInterval(
     () => animate(ctx, inputTextArr, result, colorData, x, y, width, height),

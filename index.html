@@ -1,70 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="./image/favicon.ico">
-  <title>Sabbir: sarcastic profile</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./image/favicon.ico" />
+    <title>Sabbir: sarcastic profile</title>
 
-  <link href="css/header.css" rel="stylesheet" type="text/css">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/grid.css" rel="stylesheet" type="text/css" />
+    <link href="css/header.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="header-content">
+      <div class="logo">
+        <span class="name">Mohd. Sabbir Hossain</span>
+      </div>
+      <ul class="memu-bar">
 
-  <header class="header-contents">
-    <ul class="header-value">
-      <li class="title">
-        <a href="./index.html" class="header-name"> 
-          <span class="name">Sabbir Hossain</span>
-        </a>   
-      </li>
-  
-      <li> <span class="menu menu-hidden">Tic Tac game</span> </li>
+        <li><span class="menu menu-hidden">Tic Tac game</span></li>
 
-      <li class="border-right"> 
+        <!-- <li class="border-right">
+          <img src="image/email.jpg" class="icon" />
+          <a class="pm-link" href="mailto:sabbir.hossain.dev@gmail.com"
+            >sabbir[dot]hossain[dot]dev@gmail[dot]com</a
+          >
+        </li> -->
+
+        <li class="border-right">
+          <a
+            class="pm-link"
+            target="_blank"
+            href="https://www.linkedin.com/in/sabbir-hossain-7a80b961/"
+            ><img src="image/linkedin.PNG" alt="linkedin" class="icon"
+          /></a>
+        </li>
+
+        <li class="border-right">
+          <a
+            class="pm-link"
+            target="_blank"
+            href="https://github.com/sabbir-hossain"
+            ><img src="image/github.jpg" class="icon"
+          /></a>
+        </li>
+
+        <li class="border">
+          <a
+            class="pm-link"
+            target="_blank"
+            href="https://stackoverflow.com/users/1813546/sabbir"
+            ><img src="image/stackoverflow.png" class="icon"
+          /></a>
+        </li>
+      </ul>
+    </header>
+
+    <section class="main-content">
+      <div class="nav-link left-part">
+        <img src="image/left.png" class="menu-img img-left" id="backwardDiv" />
+      </div>
+
+      <div class="canvas-part" id="canvas-area">
+        <canvas id="myCanvas"></canvas>
+        <!-- <canvas id="myCanvas" width="900" height="550"></canvas> -->
+      </div>
+
+      <div class="nav-link right-part">
+        <img src="image/right.png" class="menu-img img-right" id="forwardDiv" />
+      </div>
+    </section>
+
+    <footer class="footer-content">
+      <div class="email-footer">
         <img src="image/email.jpg" class="icon" />
-        <a class="pm-link" href="mailto:sabbir.hossain.dev@gmail.com">sabbir.hossain.dev@gmail.com</a>
-      </li> 
+          <a class="pm-link" href="mailto:sabbir.hossain.dev@gmail.com"
+            >sabbir[dot]hossain[dot]dev@gmail[dot]com</a
+          >
+      </div>
+    </footer>
 
-      <li class="border-right"> 
-        <a class="pm-link" target="_blank" href="https://www.linkedin.com/in/sabbir-hossain-7a80b961/"><img src="image/linkedin.PNG" alt="linkedin" class="icon" /></a>
-      </li>
-
-      <li class="border-right"> 
-        <a class="pm-link" target="_blank" href="https://github.com/sabbir-hossain"><img src="image/github.jpg" class="icon" /></a>
-      </li>
-
-      <li class="border"> 
-        <a class="pm-link" target="_blank" href="https://stackoverflow.com/users/1813546/sabbir"><img src="image/stackoverflow.png" class="icon" /></a>
-      </li>
-    </ul>
-  </header>
-
-	
-  <section class="columns">
-	
-    <div class="column left">
-      <img src="image/left.png" class="menu-img img-left" id="backwareDiv" />
-    </div>
-    
-    <div class="column middle">
-      <canvas id="myCanvas"></canvas>
-      <!-- <canvas id="myCanvas" width="900" height="550"></canvas> -->
-    </div>
-    
-    <div class="column right">
-      <img src="image/right.png" class="menu-img img-right" id="forwardDiv" />
-     
-    </div>
-    
-  </section>	
-
-  <script src="js/text.js"></script>
-  <script src="js/lib.js"></script>
-  <script src="js/char-data.js"></script>
-  <script src="js/merge-char.js"></script>
-  <script src="js/draw-text.js"></script>
-  <script src="js/animate.js"></script>
-</body>
+    <script src="js/text.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/char-data.js"></script>
+    <script src="js/merge-char.js"></script>
+    <script src="js/draw-text.js"></script>
+    <script src="js/animate.js"></script>
+  </body>
 </html>

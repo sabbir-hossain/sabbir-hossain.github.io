@@ -1,0 +1,35 @@
+*,
+:before,
+:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.6;
+  font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  color: #333;
+  text-align: center;
+  background-color: #efefef;
+  margin: 0;
+}
+
+footer {
+  background-color: #222;
+  color: #e4e4e4;
+  padding: 2px 0;
+}
+
+.email-footer {
+  padding: 7.5px 0;
+  text-align: center;
+}
+
+.email-footer img {
+  padding-top: 7px;
+}
