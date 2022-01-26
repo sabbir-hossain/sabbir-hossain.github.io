@@ -5,7 +5,8 @@
 }
 
 .nav-link {
-  margin-top: 200px;
+  margin-top: 75px;
+  position: fixed;
 }
 
 .menu-img:hover {

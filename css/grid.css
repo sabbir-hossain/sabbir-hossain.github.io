@@ -42,6 +42,7 @@ header {
 
 .right-part {
     grid-area: right-part;
+    right: 0;
 }
 
 footer {

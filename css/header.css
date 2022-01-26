@@ -2,6 +2,8 @@
   background-color: #222;
   color: #e4e4e4;
   padding: 7px 0;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
