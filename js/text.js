@@ -1,7 +1,7 @@
 const data = [
   {
     text: `\n
-Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer.\n
+Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer. I am very hard working and dedicated to my work. For example, sometimes I get sick only on my weekend\n
 I can speak 2 languages (bengali and english), but can write and understand 5 languages (JavaScript, Rust, Python, C, C++).\n
 I am very god following person. I follow most of the gods on twitter.\n
   `,
