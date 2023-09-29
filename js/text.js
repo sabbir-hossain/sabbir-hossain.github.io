@@ -1,7 +1,9 @@
 const data = [
   {
     text: `\n
-Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer with 6 years experience in Software Industry, specialized in JavaScript, NodeJS, Firebase, DynamoDB, Neo4j, MongoDB, ReactJs, Angular, Python, Django, C, C++ and .Net\n  I have strong knowledge of TDD, modern Microservice and REST API-Centric Architecture. I can swiftly adjust to new technologies.
+Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer.\n
+I can speak 2 languages (bengali and english), but can write and understand 5 languages (JavaScript, Rust, Python, C, C++).\n
+I am very god following person. I follow most of the gods on twitter.\n
   `,
     shadowText: [
       "empty",
@@ -23,8 +25,9 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
  Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
  Do you know where Bangladesh is? Well, you will receive a free map of Bangladesh if you ever buy a map of India.\n
- Do not think we are cheep. We are quite brave. Bangladesh is one of two nations after the USA in the world that won the liberation war in modern history and has gained its independence.\n
+ Do not think we are cheep. We are quite brave. Bangladesh is one of two nations after the USA in the world who by gained its independenc winning the liberation war.\n
  Some information about my country is given here. Bangladesh is a densely populated excessively green country. We have 12 Gregorian calendar months (as you have known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
+ We have 3 sessions which are hot session, rainy session and not so hot session.
     `,
     shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
     displayRatio: 0.8
@@ -63,10 +66,10 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
   {
     text: `
   My Aim in LIFE\n -----------------------\n
-  One Day, God KRISHNA was returning to his kingdom. All of the villagers enlighten their homes and roads so that their GOD's "Ratha Yatra" would looked wonderful.\n
+  One Day, God KRISHNA was returning to his kingdom. All of the villagers enlighten their homes and roads so that their GOD's "Ratha Yatra" would looked shining.\n
   But some villagers made their homes and roads completely into darkness.\n
   Then LORD KRISHNA asked them why did they do that?\n
-  They said that dear GOD your "Ratha Yatra" is already in enlighten, so we found out that if we would be into darkness, your "Ratha Yatra" will looked much more wonderful.\n
+  They said that dear GOD your "Ratha Yatra" is already in shining, so we found out that if we would be into darkness, your "Ratha Yatra" will looked much more shining.\n
   I wish I would be like those villagers.
     `,
     shadowText: [
@@ -112,7 +115,7 @@ Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web De
   My favorite writers are "Maupassant", "Mirza Ghalib".\n
  My most favorite book is "Don Quixote" by Miguel de Cervantes.\n
  The book I read most but never finished, is English-to-Bengali Dictionary\n
- And the books that make me cry is my check-books\n
+ And the books that make me cry are my check-books that could be because of my cache issues\n
   \n
  Social Life\n -----------------------\n
  I don't post on social media regularly, but almost every day, I do git commit
