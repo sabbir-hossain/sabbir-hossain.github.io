@@ -2,7 +2,7 @@ const data = [
   {
     text: `\n
 Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer. I am very hardworking and dedicated to my work. For example, sometimes I get sick only on weekend\n
-I can speak 2 languages (bengali and english), but can write and understand 5 languages (JavaScript, Rust, Python, C, C++).\n
+I can speak 2 languages (bengali and english), but can write and understand another 5 languages (JavaScript, Rust, Python, C, C++).\n
 I am very god following person. I follow most of the gods on twitter.\n
   `,
     shadowText: [
@@ -28,7 +28,7 @@ I am very god following person. I follow most of the gods on twitter.\n
  Do not think we are cheap. We are quite brave. Bangladesh is one of two nations after the USA in the world who gained its independence by winning the liberation war.
  Some information about my country is given here. Bangladesh is a densely populated excessively green country. 
  We have 12 Gregorian calendar months (as you have known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
- We have 3 sessions which are hot, rainy and not so hot.
+ We have 3 sessions which are hot, rainy and not so hot session.
     `,
     shadowText: ["empty", "M", "O", "N", "G", "O", "D", "B", "empty"],
     displayRatio: 0.8
