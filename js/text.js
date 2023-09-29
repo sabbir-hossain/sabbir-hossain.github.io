@@ -25,7 +25,7 @@ I am very god following person. I follow most of the gods on twitter.\n
  Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
  Do you know where Bangladesh is? Well, you will receive a free map of Bangladesh if you ever buy a map of India.\n
- Do not think we are cheep. We are quite brave. Bangladesh is one of two nations after the USA in the world who by gained its independenc winning the liberation war.\n
+ Do not think we are cheep. We are quite brave. Bangladesh is one of two nations after the USA in the world who gained its independenc by winning the liberation war.\n
  Some information about my country is given here. Bangladesh is a densely populated excessively green country. We have 12 Gregorian calendar months (as you have known), 2 bengali months which are "Falgun" and "Baishakh", 2 arabic months which are "Ramadan" and "Dhu'l-Hijjah". 
  We have 3 sessions which are hot session, rainy session and not so hot session.
     `,
