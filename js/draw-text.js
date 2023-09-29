@@ -12,6 +12,7 @@ function displayAnimation(canvas, ctx, inputStr, charList, displayRatio, x, y) {
   const val = total / totalChar;
   //let width = Math.round(Math.sqrt(val) * 0.75);
   let width = Math.round( Math.sqrt(val) * 1.5 );
+  console.log({width, val})
 
   let maxChar = Math.round(cW / width);
 
@@ -59,6 +60,8 @@ function displayAnimation(canvas, ctx, inputStr, charList, displayRatio, x, y) {
           textColor = "#333";
           fontStyle = "bold";
         }
+
+        console.log(inputTextArr[i][j], width);
 
         const input = inputTextArr.random();
         const val = input.random();
