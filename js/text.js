@@ -66,10 +66,10 @@ I am very god following person. I follow most of the gods on twitter.\n
   {
     text: `
   My Aim in LIFE\n -----------------------\n
-  One Day, God KRISHNA was returning to his kingdom. All of the villagers enlighten their homes and roads so that their GOD's "Ratha Yatra" would looked shining.\n
+  One Day, God KRISHNA was returning to his kingdom. All of the villagers were shining their homes and roads so that their GOD's "Ratha Yatra" would looked more shining.\n
   But some villagers made their homes and roads completely into darkness.\n
   Then LORD KRISHNA asked them why did they do that?\n
-  They said that dear GOD your "Ratha Yatra" is already in shining, so we found out that if we would be into darkness, your "Ratha Yatra" will looked much more shining.\n
+  They said that dear GOD your "Ratha Yatra" is already in shining, so we found out that if we would be into darkness, your "Ratha Yatra" would be looked much more shining.\n
   I wish I would be like those villagers.
     `,
     shadowText: [
