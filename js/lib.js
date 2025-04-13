@@ -56,9 +56,10 @@ function drawTextBG(
   ctx.fillStyle = textColor;
 
   /// draw text on top
-  const modTxt = txt === "M" || txt === "m" ? txt : txt === ' ' ? '     ' :  ` ${txt} `
-  ctx.fillText(modTxt, x, y);
-  // ctx.fillText(txt, x, y);
+  const modTxt = txt;
+  // const modTxt = txt === "M" || txt === "m" ? txt : txt === ' ' ? '     ' :  txt
+  // ctx.fillText(modTxt, x, y);
+  ctx.fillText(txt, x, y);
 
   /// restore original state
   ctx.restore();

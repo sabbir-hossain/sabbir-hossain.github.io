@@ -1,4 +1,4 @@
-const charHeight = 7;
+// const charHeight = 7;
 
 function scaleUpAllCharList(charList, displayRatio, schemaCharLen) {
   const margeCharList = [];

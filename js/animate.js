@@ -44,7 +44,7 @@ function draw_animation(currentPage) {
   canvas.height = Math.round(canvas.width * 0.75);
 
   // get a reference to the drawing context
-  const bgCanvas = document.createElement("canvas");
+  // const bgCanvas = document.createElement("canvas");
   // const bgContext = bgCanvas.getContext("2d").canvas;
 
   let startY = 50;
