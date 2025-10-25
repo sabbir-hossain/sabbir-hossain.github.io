@@ -1,8 +1,7 @@
 const data = [
   {
-    text: `\n
-Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer. I am very hardworking and dedicated to my work. For example, sometimes I get sick only on weekend\n
-I can speak 2 languages (bengali and english), but can write and understand another 5 languages (JavaScript, Rust, Python, C, C++).\n
+    text: `Who am I?\n -----------------------\n  Hi, I am sabbir. I am a Full Stack Web Developer. I am very hardworking and dedicated to my work. For example, sometimes I get sick only on the weekends.\n
+I can speak 2 languages (bengali and english), but can write and understand another five languages (JavaScript, Rust, Python, C, C++).\n
 I am very god following person. I follow most of the gods on twitter.\n
   `,
     shadowText: [
@@ -21,8 +20,7 @@ I am very god following person. I follow most of the gods on twitter.\n
     displayRatio: 0.9
   },
   {
-    text: `
- Where I live?\n -----------------------\n
+    text: `Where I live?\n -----------------------\n
  I am from Dhaka, Bangladesh.\n
  Do you know where Bangladesh is? Well, you will receive a free map of Bangladesh if you ever buy a map of India.
  Do not think we are cheap. We are quite brave. Bangladesh is one of two nations after the USA in the world who gained its independence by winning the liberation war.
@@ -34,15 +32,14 @@ I am very god following person. I follow most of the gods on twitter.\n
     displayRatio: 0.8
   },
   {
-    text: `
-  My Story\n -----------------------\n
+    text: `My Story\n -----------------------\n
   I wanted to be HERCULES, but I'm not that strong\n
- Wanted to be ALEXANDER-THE-GREAT, but I am not the one selected\n
- Wanted to be DIOGENES, But I am not that good at that\n
- Wanted to be HEROSTRATUS, but I am not that bad
-  Wanted to be LEONARDO DA VINCI, wanted to build MONALISA. I really wish I could
-  Wanted to be NIKOLA TESLA, But it is beyond my limits
- Wanted to be Ashutosh, but I am not that lucky\n
+ Wanted to be ALEXANDER-THE-GREAT, but I was not the one chosen\n
+ Wanted to be DIOGENES, but I am not that good\n
+ Wanted to be HEROSTRATUS, but thankfully, I am not that bad
+  Wanted to be LEONARDO DA VINCI, wanted to build MONALISA. I truly wish I could
+  Wanted to be NIKOLA TESLA, but that brilliance is beyond my limits
+ Wanted to be Ashutosh,  but I am simply not that lucky\n
 
   So what am I?\n
  I am DON QUIXOTE of LA MANCHA.\n
@@ -65,13 +62,16 @@ I am very god following person. I follow most of the gods on twitter.\n
     displayRatio: 0.8
   },
   {
-    text: `
-  My Aim in LIFE\n -----------------------\n
-  One Day, KRISHNA was returning to his kingdom. All of the villagers were shining their homes and roads so that their GOD's "Ratha Yatra" would looked more shining.\n
-  But some villagers made their homes and roads completely into darkness.\n
-  Then KRISHNA asked them why did they do that?\n
-  They said that dear GOD your "Ratha Yatra" is already shining, so we found out that if we would be into darkness, your "Ratha Yatra" would be much more shining.\n
-  I wish I would be like those villagers.
+    text: `My Aim in LIFE\n -----------------------\n
+  One day, Krishna was returning to his kingdom. All the villagers were meticulously decorating their homes and roads so that their God's Ratha Yatra (chariot procession) would look more resplendent.\n
+
+  But some villagers intentionally kept their homes and roads completely in darkness.\n
+
+  Naturally, Krishna asked them why they had chosen to do that.\n
+
+  They replied, "Dear God, your Ratha Yatra is already so bright. We realized that if we remained in darkness, your glorious procession would shine much more brilliantly.\n
+
+  I wish I could be like those villagers.
     `,
     shadowText: [
       "empty",
@@ -89,11 +89,16 @@ I am very god following person. I follow most of the gods on twitter.\n
     displayRatio: 0.65
   },
   {
-    text: `
-  My Nightmare\n -----------------------\n
-  As a software engineer, the thing that I am most afraid of is "500: Internal Server Error". But my worst nightmare is that, one day someone tells me, "So you are a software engineer, can you fix my smartphone or computer? I'm working on it, though."\n 
+    text: `My Nightmare\n -----------------------\n
+  As a software engineer, the thing I'm most afraid of is the dreaded "500: Internal Server Error.\n 
+
+But my absolute worst nightmare is when someone finds out what I do and asks me: "So you're a software engineer, can you fix my smartphone or computer?" I'm still working on how to reply to that one, though."\n 
+
+
   My Day-dream\n -----------------------\n
-  One day I will arrive at office on time, write code all day without any testing, run code successfully on production environment without a bug and go back to home on time as well as take a sound sleep.\n And I also know this is never going to happen.
+  One day, I will arrive at the office on time, write code all day without a single test, successfully deploy it directly to production without a bug, and head back home on time for a sound sleep.\n
+
+And yes, I know this is never going to happen.\n
     `,
     shadowText: [
       "empty",
@@ -110,16 +115,15 @@ I am very god following person. I follow most of the gods on twitter.\n
     displayRatio: 0.9
   },
   {
-    text: `
-  Hobbies\n -----------------------\n
-  I love reading books. I have a good understanding of mythology, history etc.
-  My favorite writers are "Maupassant", "Mirza Ghalib".\n
- My most favorite book is "Don Quixote" by Miguel de Cervantes.\n
- The book I read most but never finished, is English-to-Bengali Dictionary\n
- And the books that make me cry are my check-books that could be because of my cache issues\n
+    text: `Hobbies\n -----------------------\n
+  I love reading books and have a deep interest in mythology and history.\n
+
+My favorite writers are Maupassant and Mirza Ghalib.\n
+
+My favorite book is Don Quixote by Miguel de Cervantes. The book I've read the most but never finished is the English-to-Bengali Dictionary. And the books that truly make me cry are my checkbooks—and that might be because of my own cache issues\n
   \n
  Social Life\n -----------------------\n
- I don't post on social media regularly, but almost every day, I do git commit
+ I don't post on social media regularly, but almost every day, I do a git commit.
     `,
 
     shadowText: ["empty", "D", "Y", "N", "A", "M", "O", "D", "B", "empty"],
