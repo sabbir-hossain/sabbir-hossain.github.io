@@ -15,7 +15,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #037932;
+    background-color: #333;
     color: white;
     /* padding: 1rem; */
     position: sticky;
@@ -116,6 +116,13 @@ nav ul li a:hover {
 .profile-menu-container {
   margin-left: 3.5rem;
   position: relative;
+}
+
+img.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 /* Iframe container styles */
