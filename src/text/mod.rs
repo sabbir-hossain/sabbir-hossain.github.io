@@ -1,0 +1,55 @@
+mod a_capital;
+mod b_capital;
+mod c_capital;
+mod d_capital;
+mod e_capital;
+mod f_capital;
+mod g_capital;
+mod h_capital;
+mod i_capital;
+mod j_capital;
+mod k_capital;
+mod l_capital;
+mod m_capital;
+mod n_capital;
+mod o_capital;
+mod p_capital;
+mod q_capital;
+mod r_capital;
+mod s_capital;
+mod t_capital;
+mod u_capital;
+mod v_capital;
+mod w_capital;
+mod x_capital;
+mod y_capital;
+mod z_capital;
+
+// mod zero;
+mod one;
+mod two;
+mod three;
+mod four;
+mod five;
+mod six;
+mod seven;
+mod eight;
+mod nine;
+mod dot;
+mod divide;
+mod minus;
+mod plus;
+mod equal;
+mod multiply;
+mod first_bracket_left;
+mod first_bracket_right;
+// mod comma;
+// mod semicolon;
+// mod exclamation;
+// mod question;
+// mod hash;
+
+
+
+pub mod index;
+pub use index::Text;
