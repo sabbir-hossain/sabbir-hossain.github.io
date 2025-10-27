@@ -53,7 +53,8 @@ use super::multiply::Multiply;
 use super::first_bracket_left::FirstBracketLeft;
 use super::first_bracket_right::FirstBracketRight;
 
-// use super::comma::Comma;
+use super::comma::Comma;
+use super::single_quote::SingleQuote;
 // use super::exclamation::Exclamation;
 // use super::question::Question;
 // use super::less::Less;
@@ -69,8 +70,8 @@ pub struct Text {
   pub content: String,
   pub color: [f32; 3],
   pub position: (f32, f32),
-  line_position: (f32, f32),
-  init_position: (f32, f32),
+  pub line_position: (f32, f32),
+  pub init_position: (f32, f32),
   pub previous_length: u16,
   pub unit_x: f32,
   pub unit_y: f32,
@@ -130,7 +131,8 @@ pub struct Text {
   pub multiply: Multiply,
   pub first_bracket_left: FirstBracketLeft,
   pub first_bracket_right: FirstBracketRight,
-  // pub comma: Comma,
+  pub comma: Comma,
+  pub single_quote: SingleQuote,
   // pub exclamation: Exclamation,
   // pub question: Question,
   // pub less: Less,
@@ -161,7 +163,7 @@ impl Text {
     let font_ratio: f32 = constant::TOTAL / view_config.total_height as f32; // This is a placeholder value, adjust as needed
     let font_wide_h: f32 = 0.18;
     let font_wide_v: f32 = 0.11;
-    let font_space: f32 = 0.15;
+    let font_space: f32 = 0.2;
 
     let font_size = font_size.unwrap_or(16);
     let color = color.unwrap_or(get_random_color());
@@ -210,7 +212,8 @@ impl Text {
     let multiply = Multiply::new( view_config.clone() );
     let first_bracket_left = FirstBracketLeft::new(view_config.clone());
     let first_bracket_right = FirstBracketRight::new(view_config.clone());
-    // let comma = Comma::new( view_config.clone() );
+    let comma = Comma::new( view_config.clone() );
+    let single_quote = SingleQuote::new( view_config.clone() );
     // let exclamation = Exclamation::new( view_config.clone() );
     // let question = Question::new( view_config.clone() );
     // let less = Less::new( view_config.clone() );
@@ -284,7 +287,9 @@ impl Text {
       multiply,
       first_bracket_left,
       first_bracket_right,
-      // comma,
+
+      comma,
+      single_quote,
       // exclamation,
       // question,
       // less,
@@ -294,36 +299,32 @@ impl Text {
 
   pub fn draw(&mut self) -> Vec<ViewObject> {
     // Drawing logic for the text
-    // log::info!("Drawing text: [{}]", self.content);
+    log::info!("Drawing text: [{}]", self.content);
 
     // let s = "BCDGPQ";
     // let s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456^7 7/8 9.";
- 
+    log::info!("line position 1: ({}, {})", self.line_position.0, self.line_position.1);
     // let mut previous_x: f32 = self.position.0;
     // let mut previous_length: u16 = 0;
     for c in self.content.clone().chars() {
       let text_obj = self.get_coordinates(c);
-      log::info!("Character: [{}] 
-          pos: [{}, {}] l: {}, 
-          t: ({}, {})", c, self.position.0, self.position.1, self.previous_length, text_obj.max_x, text_obj.max_y);
+      // log::info!("Character: [{}] 
+      //     pos: [{}, {}] l: {}, 
+      //     t: ({}, {})", c, self.position.0, self.position.1, self.previous_length, text_obj.max_x, text_obj.max_y);
 
       if self.is_vertical && self.is_pow_enable == false {
         self.position.0 =  self.line_position.0;
         self.position.1 -= text_obj.max_y* 1.2;
         self.line_position.1 = self.position.1;
       } else {
-        self.position.0 += text_obj.max_x * 1.2;
+        self.position.0 += text_obj.max_x;
+        // self.position.0 += (text_obj.max_x + 0.2 * self.unit_x);
         if self.position.0 + text_obj.max_x * 1.25 > 0.9 {
           self.position.0 = self.line_position.0;
           self.position.1 -= text_obj.max_y* 2.0;
           self.line_position.1 = self.position.1;
-
-          log::info!("New line: 
-            pos: [{}, {}] l: {}, 
-            t: ({}, {})", self.position.0, self.position.1, self.previous_length, text_obj.max_x, text_obj.max_y);
         }
       }
-
 
       self.previous_length += text_obj.vertex_len as u16;
 
@@ -331,6 +332,9 @@ impl Text {
       self.indices.extend(text_obj.indices.as_ref().clone());
       self.indices_len += text_obj.indices_len;
     }
+        
+    log::info!("line position 2: ({}, {})", self.line_position.0, self.line_position.1);
+
 
     let model_matrix = camera::build_transformations(
       constant::TRANSLATION, 
@@ -616,9 +620,12 @@ impl Text {
       ')' => {
         self.first_bracket_right.get_coordinates(self)
       },
-      // ',' => {
-      //     self.comma.get_coordinates(self)
-      // },
+      ',' => {
+          self.comma.get_coordinates(self)
+      },
+      '\'' | '"' => {
+          self.single_quote.get_coordinates(self)
+      },      
       // '!' => {
       //     self.exclamation.get_coordinates(self)
       // },

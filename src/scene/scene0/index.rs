@@ -2,13 +2,15 @@ use std::rc::Rc;
 use std::vec;
 use winit::keyboard::{KeyCode};
 
-use crate::components::{
-  box_area::BoxArea,
-};
+// use crate::components::{
+//   box_area::BoxArea,
+// };
 use crate::option::{Scene, ViewConfig, ViewObject};
+use crate::utils::color::Color;
+use crate::text;
 // use crate::utils::sound;
-use crate::{scene, text};
-use crate::utils::color::{get_random_color, Color};
+// use crate::{scene, text};
+// use crate::utils::color::{get_random_color, Color};
 
 #[derive(Debug, Clone)]
 pub struct Scene0 {
@@ -43,48 +45,40 @@ impl Scene0 {
     self.unit_x = 0.52 * self.view_config.unit_x;
     self.unit_y = 0.28 * self.view_config.unit_y;
 
-    let text: &str = "One day, Krishna was returning to his kingdom. All the villagers were meticulously decorating their homes and roads so that their God's Ratha Yatra (chariot procession) would look more resplendent. ";
+    let text: &str = "
+One day, Lord Krishna was returning to his kingdom. All the villagers were meticulously decorating their homes and roads, so that their God's Ratha Yatra (chariot procession) would look more resplendent.\n
+But some villagers intentionally kept their homes and roads completely in darkness.\n
+Naturally, Krishna asked them why they had chosen to do that.\n
+They replied, \"Dear God, your Ratha Yatra is already so bright. We realized that if we remained in darkness, your glorious procession would shine much more brilliantly.\"\n
+I wish I could be like those villagers.";
 
-    //  But some villagers intentionally kept their homes and roads completely in darkness. Krishna asked them why they had chosen to do that. They replied [Dear God your Ratha Yatra is already so bright. We realized that if we remained in darkness, your glorious procession would shine much more brilliantly]. I wish I could be like those villagers
 
-    self.options.push(
-      text::Text::new(
-        text.to_string(), 
+    let split_vec: Vec<&str> = text.split('\n').collect();
+
+    let position_x = -0.9;
+    let mut position_y = 0.75;
+    let font_size = 18;
+    let font_color = Color::get(&Color::Black);
+    // log::info!("--- Using .lines() ---");
+    for line in split_vec {
+      // log::info!("[{}] --> len: {}", line, line.len()); // Brackets to show start/end of the line
+
+      if line.trim().is_empty() {
+        continue;
+      }
+
+      let mut text_obj = text::Text::new(
+        line.to_string(), 
         self.view_config.clone(), 
-        (-0.9, 0.85),
-        Some(18),
-        Some(Color::get(&Color::Black)),
+        (position_x, position_y),
+        Some(font_size),
+        Some(font_color),
         false
-      ).draw()[0].clone()
-    );
+      );  
 
-
-    // self.scene_y = 0.0;
-    // self.scene_x = -0.9;
-    // self.options.push(
-    //   text::Text::new(
-    //     "Gravitational force".to_string(), 
-    //     self.view_config.clone(), 
-    //     (-0.9, 0.35),
-    //     Some(18),
-    //     Some(Color::get(&Color::Black)),
-    //     false
-    //   ).draw()[0].clone()
-    // );
-
-
-    // self.scene_y = -0.5;
-    // self.scene_x = -0.9;
-    // self.options.push(
-    //   text::Text::new(
-    //     "Electricity".to_string(), 
-    //     self.view_config.clone(), 
-    //     (-0.9, -0.15),
-    //     Some(18),
-    //     Some(Color::get(&Color::Black)),
-    //     false
-    //   ).draw()[0].clone()
-    // );
+      self.options.push(text_obj.draw()[0].clone());
+      position_y = text_obj.line_position.1 - 0.2;
+    }
 
     self.options.clone()
   }
@@ -130,33 +124,6 @@ impl Scene0 {
           None
       }
     }
-  }
-
-  fn generate_input(&mut self, text: String) -> (ViewObject, ViewObject) {
-    let color = get_random_color();
-    // log::info!("color: {:?} <> txt : {}", color, text);
-    let box1: BoxArea = BoxArea { 
-      color, 
-      rotation: 0.0, 
-      bottom_left: (self.scene_x, self.scene_y), 
-      top_right: (self.scene_x + self.unit_x, self.scene_y + self.unit_y),
-      view_config: self.view_config.clone()
-    };
-    let box_data = box1.draw();
-
-    let mut text = text::Text::new(
-        text, 
-        self.view_config.clone(), 
-        (box1.bottom_left.0 + self.unit_x * 0.1, box1.bottom_left.1 + self.unit_y * 0.35),
-        Some(18),
-        Some(Color::get(&Color::Black)),
-        false
-    );
-    let objects_data = text.draw();
-
-    self.scene_x = self.scene_x + (self.unit_x * 1.25);
-
-    (box_data, objects_data[0].clone())
   }
 
 }

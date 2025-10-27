@@ -43,7 +43,9 @@ mod equal;
 mod multiply;
 mod first_bracket_left;
 mod first_bracket_right;
-// mod comma;
+mod comma;
+mod single_quote;
+ 
 // mod semicolon;
 // mod exclamation;
 // mod question;
