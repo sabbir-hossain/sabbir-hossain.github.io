@@ -43,66 +43,48 @@ impl Scene0 {
     self.unit_x = 0.52 * self.view_config.unit_x;
     self.unit_y = 0.28 * self.view_config.unit_y;
 
+    let text: &str = "One day, Krishna was returning to his kingdom. All the villagers were meticulously decorating their homes and roads so that their God's Ratha Yatra (chariot procession) would look more resplendent. ";
+
+    //  But some villagers intentionally kept their homes and roads completely in darkness. Krishna asked them why they had chosen to do that. They replied [Dear God your Ratha Yatra is already so bright. We realized that if we remained in darkness, your glorious procession would shine much more brilliantly]. I wish I could be like those villagers
+
     self.options.push(
       text::Text::new(
-        "linear motion".to_string(), 
+        text.to_string(), 
         self.view_config.clone(), 
         (-0.9, 0.85),
-        Some(20),
+        Some(18),
         Some(Color::get(&Color::Black)),
         false
       ).draw()[0].clone()
     );
 
-    let scene_list = ['f', 'j', 'y'];
-    for txt in scene_list {
-      let (box_data, text_data) = self.generate_input(format!("press {}", txt));
 
-      self.options.push(box_data);
-      self.options.push(text_data);
-    }
+    // self.scene_y = 0.0;
+    // self.scene_x = -0.9;
+    // self.options.push(
+    //   text::Text::new(
+    //     "Gravitational force".to_string(), 
+    //     self.view_config.clone(), 
+    //     (-0.9, 0.35),
+    //     Some(18),
+    //     Some(Color::get(&Color::Black)),
+    //     false
+    //   ).draw()[0].clone()
+    // );
 
-    self.scene_y = 0.0;
-    self.scene_x = -0.9;
-    self.options.push(
-      text::Text::new(
-        "Gravitational force".to_string(), 
-        self.view_config.clone(), 
-        (-0.9, 0.35),
-        Some(20),
-        Some(Color::get(&Color::Black)),
-        false
-      ).draw()[0].clone()
-    );
 
-    let scene_list = ['z', 'a'];
-    for txt in scene_list {
-      let (box_data, text_data) = self.generate_input(format!("press {}", txt));
-
-      self.options.push(box_data);
-      self.options.push(text_data);
-    }
-
-    self.scene_y = -0.5;
-    self.scene_x = -0.9;
-    self.options.push(
-      text::Text::new(
-        "Electricity".to_string(), 
-        self.view_config.clone(), 
-        (-0.9, -0.15),
-        Some(20),
-        Some(Color::get(&Color::Black)),
-        false
-      ).draw()[0].clone()
-    );
-
-    let scene_list = ['z'];
-    for txt in scene_list {
-      let (box_data, text_data) = self.generate_input(format!("press {}", txt));
-
-      self.options.push(box_data);
-      self.options.push(text_data);
-    }
+    // self.scene_y = -0.5;
+    // self.scene_x = -0.9;
+    // self.options.push(
+    //   text::Text::new(
+    //     "Electricity".to_string(), 
+    //     self.view_config.clone(), 
+    //     (-0.9, -0.15),
+    //     Some(18),
+    //     Some(Color::get(&Color::Black)),
+    //     false
+    //   ).draw()[0].clone()
+    // );
 
     self.options.clone()
   }

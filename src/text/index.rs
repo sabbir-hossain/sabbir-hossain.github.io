@@ -302,8 +302,10 @@ impl Text {
     // let mut previous_x: f32 = self.position.0;
     // let mut previous_length: u16 = 0;
     for c in self.content.clone().chars() {
-      // log::info!("Character: [{}] x: {}  l: {}", c, self.position.0, self.previous_length);
       let text_obj = self.get_coordinates(c);
+      log::info!("Character: [{}] 
+          pos: [{}, {}] l: {}, 
+          t: ({}, {})", c, self.position.0, self.position.1, self.previous_length, text_obj.max_x, text_obj.max_y);
 
       if self.is_vertical && self.is_pow_enable == false {
         self.position.0 =  self.line_position.0;
@@ -311,10 +313,14 @@ impl Text {
         self.line_position.1 = self.position.1;
       } else {
         self.position.0 += text_obj.max_x * 1.2;
-        if self.position.0 + text_obj.max_x * 1.25 > 0.99 {
+        if self.position.0 + text_obj.max_x * 1.25 > 0.9 {
           self.position.0 = self.line_position.0;
-          self.position.1 -= text_obj.max_y* 1.25;
+          self.position.1 -= text_obj.max_y* 2.0;
           self.line_position.1 = self.position.1;
+
+          log::info!("New line: 
+            pos: [{}, {}] l: {}, 
+            t: ({}, {})", self.position.0, self.position.1, self.previous_length, text_obj.max_x, text_obj.max_y);
         }
       }
 
@@ -434,6 +440,7 @@ impl Text {
   }
 
   fn get_coordinates(&mut self, c: char) -> TextObject {
+    const RATIO: f32 = 0.55;
     let allow_power_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '+'];
 
     if self.is_pow_enable == true && !allow_power_list.contains(&c)  {
@@ -560,8 +567,8 @@ impl Text {
             vertices: Rc::new(vec![]),
             indices: Rc::new(vec![]),
             indices_len: 0,
-            max_x: 0.0,
-            max_y: self.font_y * 0.6 * self.unit_y,
+            max_x: self.font_y * RATIO * self.unit_x,
+            max_y: self.font_y * RATIO * self.unit_y,
             vertex_len: 0,
           }
         } else {
@@ -569,8 +576,8 @@ impl Text {
             vertices: Rc::new(vec![]),
             indices: Rc::new(vec![]),
             indices_len: 0,
-            max_x: self.font_y * 0.6 * self.unit_x,
-            max_y: 0.0,
+            max_x: self.font_y * RATIO * self.unit_x,
+            max_y: self.font_y * RATIO * self.unit_y,
             vertex_len: 0,
           }
         }
@@ -584,7 +591,7 @@ impl Text {
           indices: Rc::new(vec![]), 
           indices_len: 0,
           max_x: self.font_y * 0.2 * self.unit_x,
-          max_y: 0.0,
+          max_y: self.font_y * RATIO * self.unit_y,
           vertex_len: 0,
         }
       },
@@ -641,6 +648,7 @@ impl Text {
 }
 
 
+#[derive(Debug, Clone)]
 pub struct TextObject {
 	pub vertices: Rc<Vec<Vertex>>, 
 	pub indices: Rc<Vec<u16>>,
