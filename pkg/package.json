@@ -1,0 +1,23 @@
+{
+  "name": "sabbir_hossain",
+  "type": "module",
+  "collaborators": [
+    "Mohd Sabbir Hossain <sabbir.hossain.dev@gmail.com>"
+  ],
+  "description": "personal website of Mohd Sabbir Hossain",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sabbir-hossain/sabbir-hossain.github.io.git"
+  },
+  "files": [
+    "sabbir_hossain_bg.wasm",
+    "sabbir_hossain.js",
+    "sabbir_hossain.d.ts"
+  ],
+  "main": "sabbir_hossain.js",
+  "types": "sabbir_hossain.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
