@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::{iter, sync::Arc};
 use std::rc::Rc;
 use winit::{
@@ -13,7 +14,7 @@ use wasm_bindgen::prelude::*;
 pub mod components;
 pub mod scene;
 pub mod option;
-// pub mod text;
+
 pub mod utils;
 pub mod text;
 
@@ -41,6 +42,8 @@ pub struct State {
     pub scene: Scene,
     pub init_scene: scene::scene0::Scene0,
     pub objects: Vec<ViewObject>,
+
+    pub extra_params: Option<HashMap<String, String>>,
 }
 
 impl State {
@@ -222,8 +225,10 @@ impl State {
         let init_scene = scene::scene0::Scene0::new(view_config.clone());
 
         let mut scene = Scene::Scene0(init_scene.clone());
-        let objects: Vec<ViewObject> = scene.draw();
 
+        let mut extra_params: HashMap<String, String> = HashMap::new();
+        extra_params.insert("text_position".to_string(), "0".to_string());
+        let objects: Vec<ViewObject> = scene.draw(Some(&extra_params));
 
         Ok(Self {
             surface,
@@ -243,6 +248,7 @@ impl State {
             // init_scene,
             // scene: Scene::Scene3(scene),
             objects,
+            extra_params: Some(extra_params),
         })
     }
 
@@ -256,8 +262,9 @@ impl State {
     }
 
     fn update(&mut self) {
+        let objects = self.scene.update_scene(self.extra_params.as_ref());
         
-        let objects = self.scene.update_scene(); // Capture the returned Vec<ViewObject>
+        // Capture the returned Vec<ViewObject>
         self.objects = objects.iter().map(|obj| obj.clone()).collect(); 
 
         for object in &self.objects {
@@ -364,18 +371,30 @@ impl State {
         }
         else if (code == KeyCode::F1 || code == KeyCode::Home) && is_pressed {
             // sound::select_init_scene();
-            self.objects = self.init_scene.draw();
+                
+            let mut extra_params: HashMap<String, String> = HashMap::new();
+            extra_params.insert("text_position".to_string(), "0".to_string());
+            self.extra_params = Some(extra_params);
+            self.objects = self.init_scene.draw(self.extra_params.as_ref());
             self.scene = Scene::Scene0(self.init_scene.clone());
             log::info!("F1 key pressed, returning to Scene0");
         } else {
             if is_pressed {
-                let scene = self.scene.handle_keyboard_input(code);
-                if let Some(mut scene) = scene {
-                    scene.draw();
-                    self.scene = scene;
-                } else {
-                    log::info!("Scene is None");
+                let option_selected = self.scene.handle_keyboard_input(code, self.extra_params.as_ref());
+                if !option_selected.is_empty() {
+                    if let Some(params) = &mut self.extra_params {
+                        params.insert("text_position".to_string(), option_selected);
+                    }
                 }
+                // self.scene.draw(self.extra_params.as_ref());
+                self.objects = self.scene.draw(self.extra_params.as_ref());
+                // let scene = self.scene.handle_keyboard_input(code);
+                // if let Some(mut scene) = scene {
+                //     scene.draw(self.extra_params.as_ref());
+                //     self.scene = scene;
+                // } else {
+                //     log::info!("Scene is None");
+                // }
             }
         }
         

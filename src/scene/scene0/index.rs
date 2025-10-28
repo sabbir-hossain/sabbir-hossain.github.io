@@ -1,16 +1,14 @@
+use std::collections::HashMap;
 use std::rc::Rc;
 use std::vec;
 use winit::keyboard::{KeyCode};
 
-// use crate::components::{
-//   box_area::BoxArea,
-// };
-use crate::option::{Scene, ViewConfig, ViewObject};
+use crate::option::{ViewConfig, ViewObject};
 use crate::utils::color::Color;
 use crate::text;
-// use crate::utils::sound;
-// use crate::{scene, text};
-// use crate::utils::color::{get_random_color, Color};
+
+use super::constant::TEXT_DATA;
+
 
 #[derive(Debug, Clone)]
 pub struct Scene0 {
@@ -22,6 +20,8 @@ pub struct Scene0 {
 
   unit_x: f32,
   unit_y: f32,
+
+  text: String,
 }
 impl Scene0 {
   pub fn new(view_config: Rc<ViewConfig>) -> Self {
@@ -34,10 +34,12 @@ impl Scene0 {
 
       unit_x: 0.0,
       unit_y: 0.0,
+
+      text: String::new(),
     }
   }
 
-  pub fn draw(&mut self) -> Vec<ViewObject> {
+  pub fn draw(&mut self, data: Option<&HashMap<String, String>>) -> Vec<ViewObject> {
     self.options = vec![];
 
     self.scene_y = 0.5;
@@ -45,19 +47,25 @@ impl Scene0 {
     self.unit_x = 0.52 * self.view_config.unit_x;
     self.unit_y = 0.28 * self.view_config.unit_y;
 
-    let text: &str = "
-One day, Lord Krishna was returning to his kingdom. All the villagers were meticulously decorating their homes and roads, so that their God's Ratha Yatra (chariot procession) would look more resplendent.\n
-But some villagers intentionally kept their homes and roads completely in darkness.\n
-Naturally, Krishna asked them why they had chosen to do that.\n
-They replied, \"Dear God, your Ratha Yatra is already so bright. We realized that if we remained in darkness, your glorious procession would shine much more brilliantly.\"\n
-I wish I could be like those villagers.";
+    log::info!(" data --> {:?} ", data);
 
+    if let Some(map) = data {
+      // This block runs ONLY if a HashMap was provided.
+      log::info!("✅ Data was provided. Processing {} key-value pairs...", map.len());
+      
+      if let Some(text_position) = map.get("text_position") {
+        self.text = format!("{}", TEXT_DATA[text_position.parse::<usize>().unwrap_or(0)]);
+      }
+    } else {
+      self.text = format!("{}", TEXT_DATA[0]);
 
-    let split_vec: Vec<&str> = text.split('\n').collect();
+    }
+
+    let split_vec: Vec<&str> = self.text.split('\n').collect();
 
     let position_x = -0.9;
-    let mut position_y = 0.75;
-    let font_size = 18;
+    let mut position_y = 0.85;
+    let font_size = 16;
     let font_color = Color::get(&Color::Black);
     // log::info!("--- Using .lines() ---");
     for line in split_vec {
@@ -77,51 +85,71 @@ I wish I could be like those villagers.";
       );  
 
       self.options.push(text_obj.draw()[0].clone());
-      position_y = text_obj.line_position.1 - 0.2;
+      position_y = text_obj.line_position.1 - 0.15;
     }
 
     self.options.clone()
   }
 
-  pub fn update(&mut self) -> Vec<ViewObject> {
+  pub fn update(&mut self, _data: Option<&HashMap<String, String>>) -> Vec<ViewObject> {
     // log::info!("update : {} ", now_str());
 
     self.options.clone()
   }
 
-  pub fn handle_keyboard_input(&mut self, physical_key: KeyCode) -> Option<Scene> {
+  // pub fn handle_keyboard_input(&mut self, physical_key: KeyCode) -> Option<Scene> {
+  pub fn handle_keyboard_input(
+    &mut self, 
+    physical_key: KeyCode, 
+    data: Option<&HashMap<String, String>>
+  ) -> String {
   //  let scene_list = ['f', 'j', 'y', 'z'];
+
+    let last_option = if let Some(map) = data {
+      if let Some(text_position) = map.get("text_position") {
+        text_position.parse::<usize>().unwrap_or(0)
+      } else {
+        0
+      }
+    } else {
+      0
+    };
+
     match physical_key {
-      KeyCode::KeyF => {
-        // sound::select_scene();
-        // let scene = scene::scene3::Scene3::new(self.view_config.clone());
-        // Some(Scene::Scene3(scene))
-        None
+      KeyCode::ArrowRight => {
+        let next_position = if last_option + 1 < TEXT_DATA.len() {
+          last_option + 1
+        } else {
+          0
+        };
+        format!("{}", next_position)
       }
-      KeyCode::KeyJ => {
-        // sound::select_scene();
-        // let scene = scene::scene4::Scene4::new(self.view_config.clone());
-        // Some(Scene::Scene4(scene))
-        None
+      KeyCode::ArrowLeft => {
+        let previous_position = if last_option >= 1 {
+          last_option - 1
+        } else {
+          TEXT_DATA.len() - 1
+        };
+        format!("{}", previous_position)
       }
-      KeyCode::KeyY => {
-        // sound::select_scene();
-        // let scene = scene::scene1::Scene1::new(self.view_config.clone());
-        // Some(Scene::Scene1(scene))
-        None
-      }
-      KeyCode::KeyZ => {
-        // sound::select_scene();
-        // let scene = scene::scene2::Scene2::new(self.view_config.clone(), SelectedOption::Radius);
-        // Some(Scene::Scene2(scene))
-        None
-      }
-      KeyCode::KeyA => {
-        None
-      }
+      // KeyCode::KeyY => {
+      //   // sound::select_scene();
+      //   // let scene = scene::scene1::Scene1::new(self.view_config.clone());
+      //   // Some(Scene::Scene1(scene))
+      //   None
+      // }
+      // KeyCode::KeyZ => {
+      //   // sound::select_scene();
+      //   // let scene = scene::scene2::Scene2::new(self.view_config.clone(), SelectedOption::Radius);
+      //   // Some(Scene::Scene2(scene))
+      //   None
+      // }
+      // KeyCode::KeyA => {
+      //   None
+      // }
       _ => {
           log::info!("Invalid key pressed: {:?}", physical_key);
-          None
+          "0".to_string()
       }
     }
   }

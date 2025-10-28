@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::{rc::Rc};
 use winit::keyboard::KeyCode;
 
@@ -68,24 +69,25 @@ impl Scene {
 			}
 	}
 
-	pub fn draw(&mut self) -> Vec<ViewObject> {
+	pub fn draw(&mut self, data: Option<&HashMap<String, String>>) -> Vec<ViewObject> {
     match self {
-        Scene::Scene0(scene0_obj) => scene0_obj.draw(),
+        Scene::Scene0(scene0_obj) => scene0_obj.draw(data),
     }
 	}
 
-	pub fn update_scene(&mut self) -> Vec<ViewObject> {
+	pub fn update_scene(&mut self, data: Option<&HashMap<String, String>>) -> Vec<ViewObject> {
 		match self {
-				Scene::Scene0(scene0_obj) => scene0_obj.update(),
+				Scene::Scene0(scene0_obj) => scene0_obj.update(data),
 		}
 	}
 
 	pub fn handle_keyboard_input(
 		&mut self, 
-		key: KeyCode
-	) -> Option<Scene> {
+		key: KeyCode,
+		data: Option<&HashMap<String, String>>
+	) -> String {
 		match self {
-			Scene::Scene0(scene0_obj) => scene0_obj.handle_keyboard_input(key),
+			Scene::Scene0(scene0_obj) => scene0_obj.handle_keyboard_input(key, data),
 		}
 	}
 

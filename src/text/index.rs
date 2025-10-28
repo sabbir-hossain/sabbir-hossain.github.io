@@ -306,8 +306,16 @@ impl Text {
     log::info!("line position 1: ({}, {})", self.line_position.0, self.line_position.1);
     // let mut previous_x: f32 = self.position.0;
     // let mut previous_length: u16 = 0;
-    for c in self.content.clone().chars() {
-      let text_obj = self.get_coordinates(c);
+    let mut is_line_end: f32 = 0.0;
+    let allow_eol_list = [' ', '.', ',', ';', ':', '!', '?'];
+
+    let chars: Vec<char> = self.content.chars().collect();
+    let len = chars.len();
+
+    // for c in self.content.clone().chars() {
+    for (i, c) in chars.iter().enumerate() {
+    // while let Some(c) = char_iter.clone().next() {
+      let text_obj = self.get_coordinates(*c);
       // log::info!("Character: [{}] 
       //     pos: [{}, {}] l: {}, 
       //     t: ({}, {})", c, self.position.0, self.position.1, self.previous_length, text_obj.max_x, text_obj.max_y);
@@ -320,9 +328,8 @@ impl Text {
         self.position.0 += text_obj.max_x;
         // self.position.0 += (text_obj.max_x + 0.2 * self.unit_x);
         if self.position.0 + text_obj.max_x * 1.25 > 0.9 {
-          self.position.0 = self.line_position.0;
-          self.position.1 -= text_obj.max_y* 2.0;
-          self.line_position.1 = self.position.1;
+          is_line_end = if i + 1 < len && !allow_eol_list.contains(&chars[i + 1]) { text_obj.max_y* 2.0 } else { 0.0 };
+
         }
       }
 
@@ -331,6 +338,22 @@ impl Text {
       self.vertices.extend(text_obj.vertices.as_ref().clone());
       self.indices.extend(text_obj.indices.as_ref().clone());
       self.indices_len += text_obj.indices_len;
+
+      if is_line_end != 0.0 {
+        log::info!("Line break at character: [{} -> {}]", c, chars[i + 1]);
+        // is_line_end = false;
+        let text_obj2 = self.get_coordinates('-');
+        self.previous_length += text_obj2.vertex_len as u16;
+          
+        self.vertices.extend(text_obj2.vertices.as_ref().clone());
+        self.indices.extend(text_obj2.indices.as_ref().clone());
+        self.indices_len += text_obj2.indices_len;
+      
+        self.position.0 = self.line_position.0;
+        self.position.1 -= is_line_end;
+        self.line_position.1 = self.position.1;
+        is_line_end = 0.0;
+      }
     }
         
     log::info!("line position 2: ({}, {})", self.line_position.0, self.line_position.1);
