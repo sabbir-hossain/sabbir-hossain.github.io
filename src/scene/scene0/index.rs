@@ -47,11 +47,11 @@ impl Scene0 {
     self.unit_x = 0.52 * self.view_config.unit_x;
     self.unit_y = 0.28 * self.view_config.unit_y;
 
-    log::info!(" data --> {:?} ", data);
+    // log::info!(" data --> {:?} ", data);
 
     if let Some(map) = data {
       // This block runs ONLY if a HashMap was provided.
-      log::info!("✅ Data was provided. Processing {} key-value pairs...", map.len());
+      // log::info!("✅ Data was provided. Processing {} key-value pairs...", map.len());
       
       if let Some(text_position) = map.get("text_position") {
         self.text = format!("{}", TEXT_DATA[text_position.parse::<usize>().unwrap_or(0)]);
@@ -102,7 +102,7 @@ impl Scene0 {
     &mut self, 
     physical_key: KeyCode, 
     data: Option<&HashMap<String, String>>
-  ) -> String {
+  ) -> char {
   //  let scene_list = ['f', 'j', 'y', 'z'];
 
     let last_option = if let Some(map) = data {
@@ -114,23 +114,30 @@ impl Scene0 {
     } else {
       0
     };
+    
 
     match physical_key {
       KeyCode::ArrowRight => {
-        let next_position = if last_option + 1 < TEXT_DATA.len() {
-          last_option + 1
+        let next_position: u8 = if last_option + 1 < TEXT_DATA.len() {
+          last_option as u8 + 1
         } else {
           0
         };
-        format!("{}", next_position)
+        // format!('{}', next_position)
+        (next_position + b'0') as char
       }
       KeyCode::ArrowLeft => {
-        let previous_position = if last_option >= 1 {
-          last_option - 1
+        let previous_position: u8 = if last_option >= 1 {
+          last_option as u8 - 1
         } else {
-          TEXT_DATA.len() - 1
+          TEXT_DATA.len() as u8 - 1
         };
-        format!("{}", previous_position)
+        // format!("{}", previous_position)
+        (previous_position + b'0') as char
+      }
+      KeyCode::KeyA => {
+        // "A".to_string()
+        'A'
       }
       // KeyCode::KeyY => {
       //   // sound::select_scene();
@@ -149,7 +156,8 @@ impl Scene0 {
       // }
       _ => {
           log::info!("Invalid key pressed: {:?}", physical_key);
-          "0".to_string()
+          // "X".to_string()
+          'X'
       }
     }
   }

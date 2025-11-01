@@ -85,7 +85,7 @@ impl Scene {
 		&mut self, 
 		key: KeyCode,
 		data: Option<&HashMap<String, String>>
-	) -> String {
+	) -> char {
 		match self {
 			Scene::Scene0(scene0_obj) => scene0_obj.handle_keyboard_input(key, data),
 		}

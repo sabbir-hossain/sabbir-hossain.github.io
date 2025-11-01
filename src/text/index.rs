@@ -299,11 +299,11 @@ impl Text {
 
   pub fn draw(&mut self) -> Vec<ViewObject> {
     // Drawing logic for the text
-    log::info!("Drawing text: [{}]", self.content);
+    // log::info!("Drawing text: [{}]", self.content);
 
     // let s = "BCDGPQ";
     // let s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456^7 7/8 9.";
-    log::info!("line position 1: ({}, {})", self.line_position.0, self.line_position.1);
+    // log::info!("line position 1: ({}, {})", self.line_position.0, self.line_position.1);
     // let mut previous_x: f32 = self.position.0;
     // let mut previous_length: u16 = 0;
     let mut is_line_end: f32 = 0.0;
@@ -340,7 +340,7 @@ impl Text {
       self.indices_len += text_obj.indices_len;
 
       if is_line_end != 0.0 {
-        log::info!("Line break at character: [{} -> {}]", c, chars[i + 1]);
+        // log::info!("Line break at character: [{} -> {}]", c, chars[i + 1]);
         // is_line_end = false;
         let text_obj2 = self.get_coordinates('-');
         self.previous_length += text_obj2.vertex_len as u16;
@@ -356,7 +356,7 @@ impl Text {
       }
     }
         
-    log::info!("line position 2: ({}, {})", self.line_position.0, self.line_position.1);
+    // log::info!("line position 2: ({}, {})", self.line_position.0, self.line_position.1);
 
 
     let model_matrix = camera::build_transformations(

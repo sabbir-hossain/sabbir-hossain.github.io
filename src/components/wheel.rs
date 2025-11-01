@@ -170,7 +170,7 @@ impl Wheel {
           [0.0, 0.0, rotation.to_radians()],
           constant::SCALING,
       );
-      log::info!("center: {:?} matrix : {:?}", center, model_matrix);
+      // log::info!("center: {:?} matrix : {:?}", center, model_matrix);
       updated_center_cap.push(ViewObject {
         model_matrix,
         ..center_cap.clone()
