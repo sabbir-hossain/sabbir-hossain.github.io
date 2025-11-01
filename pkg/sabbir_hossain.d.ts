@@ -15,9 +15,9 @@ export interface InitOutput {
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly __wbindgen_export_6: WebAssembly.Table;
   readonly closure2971_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure2967_externref_shim: (a: number, b: number, c: any, d: any) => void;
-  readonly wasm_bindgen__convert__closures_____invoke__h7ca12409239dbcb0: (a: number, b: number) => void;
   readonly closure3026_externref_shim: (a: number, b: number, c: any) => void;
+  readonly wasm_bindgen__convert__closures_____invoke__h7ca12409239dbcb0: (a: number, b: number) => void;
+  readonly closure2967_externref_shim: (a: number, b: number, c: any, d: any) => void;
   readonly __wbindgen_start: () => void;
 }
 
