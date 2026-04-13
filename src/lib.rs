@@ -255,6 +255,12 @@ impl State {
     }
 
     pub fn resize(&mut self, width: u32, height: u32) {
+        // WebGL (wgpu downlevel) caps max texture size at 2048.
+        // On Mac Retina (DPR=2), winit's inner_size() returns physical pixels
+        // which can exceed this limit, so clamp each dimension.
+        #[cfg(target_arch = "wasm32")]
+        let (width, height) = (width.min(2048), height.min(2048));
+
         if width > 0 && height > 0 {
             self.config.width = width;
             self.config.height = height;
@@ -262,6 +268,7 @@ impl State {
             self.is_surface_configured = true;
         }
     }
+
 
     fn update(&mut self) {
         let objects = self.scene.update_scene(Some(&self.extra_params));
@@ -458,8 +465,23 @@ impl ApplicationHandler<State> for App {
 
             // Get CSS-rendered size
             let rect = html_canvas_element.get_bounding_client_rect();
-            let css_width = rect.width();
-            let css_height = rect.height();
+            let mut css_width = rect.width();
+            let mut css_height = rect.height();
+
+            // On Mac, the canvas may not be laid out yet when resumed() fires,
+            // so bounding rect can return 0. Fall back to window inner dimensions.
+            if css_width <= 0.0 || css_height <= 0.0 {
+                css_width = window
+                    .inner_width()
+                    .ok()
+                    .and_then(|v| v.as_f64())
+                    .unwrap_or(800.0);
+                css_height = window
+                    .inner_height()
+                    .ok()
+                    .and_then(|v| v.as_f64())
+                    .unwrap_or(600.0);
+            }
 
             // Set actual pixel buffer size
             html_canvas_element.set_width(css_width as u32);
