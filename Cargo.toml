@@ -22,7 +22,7 @@ wgpu = "25.0"
 winit = { version = "0.30", features = ["rwh_05", "android-native-activity"] }
 wasm-logger = "0.2.0"
 wasm-bindgen-console-logger = "0.1.1"
-rand = "0.8"
+rand = "0.9"
 chrono = { version = "0.4", default-features = false, features = ["clock"] }
 js-sys = "0.3"
 rodio = "0.17"
